@@ -1,4 +1,4 @@
-const CACHE = 'numero1-v11';
+const CACHE = 'numero1-v12';
 const FILES = [
   './',
   './index.html',
@@ -16,6 +16,8 @@ const FILES = [
   './ill-pizza.svg',
   './ill-forno.svg',
   './ill-kebab.svg',
+  './forno-a-legna-pizzeria-como.jpg',
+  './forno-a-legna-pizzeria-como-800.jpg',
   './foto-capricciosa-400.jpg',
   './foto-capricciosa.jpg',
   './foto-diavola-400.jpg',
