@@ -1,4 +1,4 @@
-const CACHE = 'numero1-v9';
+const CACHE = 'numero1-v10';
 const FILES = [
   './',
   './index.html',
@@ -29,7 +29,29 @@ const FILES = [
   './th-napoli.jpg',
   './th-prosciutto-e-funghi.jpg',
   './th-quattro-formaggi.jpg',
-  './th-quattro-stagioni.jpg'
+  './th-quattro-stagioni.jpg',
+  './th-marinara.jpg',
+  './th-rucola.jpg',
+  './th-calzone-liscio.jpg',
+  './th-prosciutto.jpg',
+  './th-pugliese.jpg',
+  './th-patatine.jpg',
+  './th-romana.jpg',
+  './th-salsiccia.jpg',
+  './th-salame-dolce.jpg',
+  './th-wurstel.jpg',
+  './th-calabrese.jpg',
+  './th-carciofi.jpg',
+  './th-parmigiana.jpg',
+  './th-campagnola.jpg',
+  './th-carbonara.jpg',
+  './th-calzone-farcito.jpg',
+  './th-occhio-di-bue.jpg',
+  './th-messicana.jpg',
+  './th-taranto.jpg',
+  './th-pepericcia.jpg',
+  './th-rustica.jpg',
+  './th-zucchine-e-zola.jpg'
 ];
 
 self.addEventListener('install', (e) => {
