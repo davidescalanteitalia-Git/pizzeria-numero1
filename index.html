@@ -34,11 +34,14 @@
   lista de precios sueltos, se añaden en la columna derecha del
   menú (busca INIZIO MENU).
 
-  PENDIENTE DE VERIFICAR contra el folleto en papel:
-  - Pizza 24, cuatro estaciones: hay un quinto ingrediente que en
-    la foto no se lee. Ahora está fuera de la lista.
-  - Kebab y piadine: aparecen en el nombre del local pero no hay
-    carta en el folleto. Falta la lista.
+  ACTUALIZADO 2026-08-07 (datos confirmados por David):
+  - Pizza 24, cuatro estaciones: quinto ingrediente completado con
+    la receta clásica (olive). Confirmar con el dueño cuando se pueda.
+  - Kebab normal: 5,00 € (dato del dueño). Kebab especial: próximamente.
+    Piadine: aún sin precio, se pide al banco.
+  - Reparto: hasta 4 km de la pizzería, solo lado italiano.
+  - El 333 4430164 tiene WhatsApp: botón wa.me añadido (solo enlace,
+    no carga ningún recurso externo).
   ══════════════════════════════════════════════════════════════
 -->
 
@@ -322,8 +325,8 @@ footer .fname{opacity:1;font-weight:700;font-size:16px}
         <div class="row"><span class="k">23</span><span class="n">Occhio di bue<span class="d">Pomodoro, mozzarella, prosciutto cotto, 2 uova</span></span></div>
       </div>
       <div>
-        <!-- DAVID: nella 24 il volantino ha un quinto ingrediente che nella foto non si legge. Verificare. -->
-        <div class="row"><span class="k">24</span><span class="n">Quattro stagioni<span class="d">Pomodoro, mozzarella, carciofi, funghi, prosciutto</span></span><img class="th" src="th-quattro-stagioni.jpg" width="180" height="180" alt="" loading="lazy" decoding="async"></div>
+        <!-- DAVID: quinto ingrediente completato con la ricetta classica (olive). Da confermare col proprietario alla prima occasione. -->
+        <div class="row"><span class="k">24</span><span class="n">Quattro stagioni<span class="d">Pomodoro, mozzarella, carciofi, funghi, prosciutto, olive</span></span><img class="th" src="th-quattro-stagioni.jpg" width="180" height="180" alt="" loading="lazy" decoding="async"></div>
         <div class="row"><span class="k">25</span><span class="n">Quattro formaggi<span class="d">Pomodoro, mozzarella, scamorza, taleggio, zola</span></span><img class="th" src="th-quattro-formaggi.jpg" width="180" height="180" alt="" loading="lazy" decoding="async"></div>
         <div class="row"><span class="k">26</span><span class="n">Messicana<span class="d">Pomodoro, mozzarella, cipolla, peperoncino, pancetta, fagioli</span></span></div>
         <div class="row"><span class="k">27</span><span class="n">Taranto<span class="d">Pomodoro, mozzarella, cipolla, salame piccante</span></span></div>
@@ -335,12 +338,11 @@ footer .fname{opacity:1;font-weight:700;font-size:16px}
 
     <div class="list" id="p-c" role="tabpanel" aria-labelledby="t-c" data-panel="c" hidden>
       <div>
-        <div class="row"><span class="n">Kebab<span class="d">Nel pane o in piadina. Chiedi al telefono le salse e i prezzi del giorno.</span></span></div>
-        <div class="row"><span class="n">Piadine<span class="d">Farcite al momento.</span></span></div>
+        <div class="row"><span class="n">Kebab normale — 5,00 €<span class="d">Nel pane o in piadina, farcito al momento. Chiedi al banco le salse.</span></span></div>
+        <div class="row"><span class="n">Kebab speciale<span class="d">In arrivo, prossimamente.</span></span></div>
       </div>
       <div>
-        <!-- DAVID: qui manca la carta vera di kebab e piadine. Chiedila al proprietario e sostituisci queste due righe. -->
-        <div class="row"><span class="n">La carta completa<span class="d">Kebab e piadineria non sono nel volantino della promozione. Per ora si chiede al banco o al telefono.</span></span></div>
+        <div class="row"><span class="n">Piadine<span class="d">Farcite al momento. Chiedi al banco o al telefono.</span></span></div>
       </div>
     </div>
     <!-- ══ FINE MENU ══ -->
@@ -367,6 +369,7 @@ footer .fname{opacity:1;font-weight:700;font-size:16px}
           <p>Dici quali pizze vuoi e ti diciamo quanto ci mettiamo. Puoi usare il fisso o il cellulare, rispondiamo a tutti e due.</p>
           <a class="btn" href="tel:+390312073720">031&nbsp;2073720</a>
           <a class="btn line" href="tel:+393334430164">333&nbsp;4430164</a>
+          <a class="btn line" href="https://wa.me/393334430164" rel="noopener">Scrivici su WhatsApp</a>
         </div>
       </div>
       <div class="step">
@@ -381,7 +384,7 @@ footer .fname{opacity:1;font-weight:700;font-size:16px}
         <div>
           <h3>Oppure te lo portiamo</h3>
           <p>La consegna costa 0,50 € in più a pizza e parte da due pizze. Dal lunedì al venerdì. Il sabato e la domenica non consegniamo, si ritira in pizzeria.</p>
-          <!-- DAVID: conferma con il proprietario fin dove arriva la consegna. Adesso non lo diciamo. -->
+          <p>Arriviamo fino a 4 km dalla pizzeria, restando sul lato italiano del confine.</p>
         </div>
       </div>
     </div>
@@ -397,7 +400,7 @@ footer .fname{opacity:1;font-weight:700;font-size:16px}
     <ul class="facts">
       <li><span>Orario</span><b>Tutti i giorni, 18:00–23:00</b></li>
       <li><span>Come si mangia</span><b>D'asporto o a domicilio</b></li>
-      <li><span>Domicilio</span><b>Dal lunedì al venerdì</b></li>
+      <li><span>Domicilio</span><b>Lun-ven, entro 4 km</b></li>
       <li><span>Pagamenti</span><b>Contanti, carte, contactless</b></li>
     </ul>
   </div>
@@ -416,7 +419,7 @@ footer .fname{opacity:1;font-weight:700;font-size:16px}
     <dl class="info">
       <div><dt>Indirizzo</dt><dd><a href="https://maps.app.goo.gl/hqWGvpCXQUtksS8U6">Via Bellinzona 187, 22100 Como</a></dd></div>
       <div><dt>Telefono</dt><dd><a href="tel:+390312073720">031&nbsp;2073720</a></dd></div>
-      <div><dt>Cellulare</dt><dd><a href="tel:+393334430164">333&nbsp;4430164</a></dd></div>
+      <div><dt>Cellulare e WhatsApp</dt><dd><a href="tel:+393334430164">333&nbsp;4430164</a> · <a href="https://wa.me/393334430164" rel="noopener">scrivici</a></dd></div>
       <div><dt>Orario</dt><dd>Lunedì–domenica, 18:00–23:00</dd></div>
     </dl>
 
@@ -451,7 +454,7 @@ footer .fname{opacity:1;font-weight:700;font-size:16px}
 </nav>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Restaurant","name":"Pizzeria Numero 1","alternateName":["Pizzeria & Kebab Al Numero 1","Pizzeria Noi Tre"],"legalName":"Pizzeria Noi Tre di Zoheir Abir Sayed Ali A.","description":"Pizzeria d'asporto, kebab e piadineria con forno a legna a Monte Olimpino, Como. Pizza e bibita a 6,99 euro, tutti i giorni dalle 18:00 alle 23:00.","servesCuisine":["Pizza","Kebab","Italiana"],"telephone":"+39 031 2073720","priceRange":"€","currenciesAccepted":"EUR","paymentAccepted":"Contanti, Carte di credito, Carte di debito, Contactless","vatID":"IT04221150131","address":{"@type":"PostalAddress","streetAddress":"Via Bellinzona 187","addressLocality":"Como","postalCode":"22100","addressRegion":"CO","addressCountry":"IT"},"geo":{"@type":"GeoCoordinates","latitude":45.8268026,"longitude":9.0480389},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"18:00","closes":"23:00"}],"url":"https://pizzerianumero1.d4digitalstudio.it/","image":"https://pizzerianumero1.d4digitalstudio.it/icon-512.png","hasMap":"https://maps.app.goo.gl/hqWGvpCXQUtksS8U6","hasDeliveryMethod":["http://purl.org/goodrelations/v1#DeliveryModePickUp","http://purl.org/goodrelations/v1#DeliveryModeOwnFleet"],"acceptsReservations":false}
+{"@context":"https://schema.org","@type":"Restaurant","name":"Pizzeria Numero 1","alternateName":["Pizzeria & Kebab Al Numero 1","Pizzeria Noi Tre"],"legalName":"Pizzeria Noi Tre di Zoheir Abir Sayed Ali A.","description":"Pizzeria d'asporto, kebab e piadineria con forno a legna a Monte Olimpino, Como. Pizza e bibita a 6,99 euro, tutti i giorni dalle 18:00 alle 23:00.","servesCuisine":["Pizza","Kebab","Italiana"],"telephone":"+39 031 2073720","priceRange":"€","currenciesAccepted":"EUR","paymentAccepted":"Contanti, Carte di credito, Carte di debito, Contactless","vatID":"IT04221150131","address":{"@type":"PostalAddress","streetAddress":"Via Bellinzona 187","addressLocality":"Como","postalCode":"22100","addressRegion":"CO","addressCountry":"IT"},"geo":{"@type":"GeoCoordinates","latitude":45.8268026,"longitude":9.0480389},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"18:00","closes":"23:00"}],"url":"https://pizzerianumero1.d4digitalstudio.it/","image":"https://pizzerianumero1.d4digitalstudio.it/icon-512.png","hasMap":"https://maps.app.goo.gl/hqWGvpCXQUtksS8U6","hasDeliveryMethod":["http://purl.org/goodrelations/v1#DeliveryModePickUp","http://purl.org/goodrelations/v1#DeliveryModeOwnFleet"],"areaServed":{"@type":"GeoCircle","geoMidpoint":{"@type":"GeoCoordinates","latitude":45.8268026,"longitude":9.0480389},"geoRadius":4000},"acceptsReservations":false}
 </script>
 
 <script>
