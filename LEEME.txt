@@ -1,0 +1,137 @@
+PIZZERIA NUMERO 1 — web
+Versión 3, con los datos reales del folleto
+===========================================
+
+LOS DOS NOMBRES
+---------------
+"Pizzeria Numero 1" es la marca que ve el cliente: es la del
+folleto y la de la ficha de Google. Es la que va en toda la web.
+
+"Pizzeria Noi Tre di Zoheir Abir Sayed Ali A." es la razón social
+que sale en el ticket. Va solo en el pie de página y en la
+informativa privacy, que es donde la ley la pide.
+
+No hay que elegir entre las dos: cada una tiene su sitio.
+
+QUÉ HAY AQUÍ DENTRO
+-------------------
+index.html               La página principal.
+privacy.html             La informativa privacy (obligatoria, ver abajo).
+manifest.webmanifest     Ficha de la "app": nombre, icono, color.
+sw.js                    Lo que hace que funcione sin internet.
+mappa.jpg                Mapa de la calle (imagen propia, no es Google).
+mappa-480.jpg            El mismo mapa en pequeño, para móviles lentos.
+icon-192.png             Icono.
+icon-512.png             Icono grande.
+icon-maskable-512.png    Icono para Android (recortado en círculo).
+apple-touch-icon.png     Icono para iPhone.
+favicon-64.png           Icono de la pestaña del navegador.
+
+No borres ninguno y no cambies los nombres. Tienen que estar todos
+en la misma carpeta.
+
+
+ANTES DE PUBLICAR: CUATRO COSAS QUE FALTAN
+------------------------------------------
+1. En privacy.html hay un correo puesto como INDIRIZZO@ESEMPIO.IT.
+   Cámbialo por el correo real. Sin eso la informativa no vale.
+
+2. La pizza 24, quattro stagioni, tiene en el folleto un quinto
+   ingrediente que en la foto no se lee. Míralo en el papel y
+   añádelo.
+
+3. Kebab y piadine salen en el nombre del local pero no tienen
+   carta en el folleto. Falta pedirle la lista al dueño.
+
+4. Hasta dónde llega el reparto. La web dice que se entrega, con
+   las condiciones del folleto, pero no dice hasta qué calles.
+
+Los precios NO hay que tocarlos: los únicos que aparecen son los
+del folleto (6,99 € pizza + bebida, suplementos de 1 € y 2 €).
+No hay ninguna cifra inventada.
+
+
+PARA VERLA EN EL MÓVIL SIN PUBLICARLA
+-------------------------------------
+Abre index.html con Chrome. Se ve entera, pero no se instala:
+instalarse como app solo funciona si está publicada con https.
+
+
+PARA PUBLICARLA (GRATIS)
+------------------------
+1. Entra en netlify.com y crea una cuenta.
+2. Busca "Add new site" y luego "Deploy manually".
+3. Sube esta carpeta entera, o el archivo .zip.
+4. Te dan una dirección tipo  noitre.netlify.app
+5. Ábrela en el móvil. Al final de la página aparecerá el botón
+   "Aggiungi alla schermata iniziale", y también estará
+   "Instalar aplicación" en el menú de los tres puntos de Chrome.
+
+Sirven igual github.com/pages y vercel.com. Ninguna cobra.
+
+
+POR QUÉ EL MAPA NO ES DE GOOGLE
+-------------------------------
+El mapa incrustado de Google enviaba la dirección IP de cada
+visitante a servidores de Google nada más abrir la página, sin
+pedir permiso. En Italia eso obliga a poner un banner de cookies
+y complica la informativa privacy.
+
+Ahora el mapa es una imagen guardada en la propia web, hecha con
+datos de OpenStreetMap (la atribución va impresa en la esquina,
+es obligatoria y no se puede quitar). Al tocarla se abre Google
+Maps, que es lo que la gente quiere para las indicaciones, pero
+solo cuando el visitante decide tocarla.
+
+Efecto secundario: la página pasó de tardar más de 14 segundos
+en terminar de cargar a menos de 1 segundo.
+
+
+PARA PONER FOTOS
+----------------
+Copia las fotos en esta misma carpeta. Luego busca en index.html
+las líneas que ponen
+
+    <div class="ph">Foto della pizza</div>
+
+y cámbialas por
+
+    <img src="pizza.jpg" alt="Pizza margherita" width="800" height="800">
+
+usando el nombre real de cada foto. Conviene que no pesen más de
+300 KB cada una.
+
+Cuando añadas archivos nuevos, acuérdate de apuntarlos también en
+la lista de sw.js, para que funcionen sin conexión.
+
+
+DATOS DE LA PIZZERÍA QUE HAY EN LA PÁGINA
+-----------------------------------------
+Marca         Pizzeria d'asporto & Kebab Numero 1, di Ahmed
+Razón social  Pizzeria Noi Tre di Zoheir Abir Sayed Ali A.
+Dirección     Via Bellinzona 187, 22100 Como (CO)
+Barrio        Monte Olimpino
+Teléfono      031 2073720
+Móvil         333 4430164
+Horario       Todos los días, 18:00 a 23:00
+Horno         De leña
+P.IVA         04221150131
+
+LA PROMOCIÓN QUE SALE EN LA WEB
+-------------------------------
+Pizza + bebida       6,99 €   (antes 10,00 €)
+Vale para            las 30 pizzas de la lista
+Válida hasta         31 de diciembre de 2026
+A domicilio          +0,50 € por pizza, mínimo 2 pizzas
+Domicilio NO         sábados ni domingos
+Suplementos          1 € por ingrediente añadido
+                     2 € por embutidos, atún o búfala
+
+Todo esto sale del folleto. Si el dueño cambia la oferta, hay que
+cambiarla en index.html y también en el texto de la cabecera.
+
+La P.IVA en la página principal es obligatoria en Italia
+(art. 35 D.P.R. 633/1972). Está en el pie. No la quites.
+
+Si algo de esto cambia, hay que corregirlo en index.html,
+en privacy.html y en manifest.webmanifest.

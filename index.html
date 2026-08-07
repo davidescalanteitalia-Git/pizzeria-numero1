@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pizzeria Numero 1 — Forno a legna, Via Bellinzona 187, Como</title>
+<meta name="description" content="Pizzeria d'asporto e kebab Numero 1, forno a legna. Via Bellinzona 187, Monte Olimpino, Como. Pizza + bibita a 6,99 €. Tutti i giorni 18:00-23:00. Tel. 031 2073720">
+<meta name="theme-color" content="#b03a24">
+<link rel="canonical" href="https://pizzerianumero1.d4digitalstudio.it/">
+<meta property="og:url" content="https://pizzerianumero1.d4digitalstudio.it/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon-64.png" sizes="64x64">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Numero 1">
+<meta property="og:title" content="Pizzeria Numero 1 — Como">
+<meta property="og:description" content="Forno a legna in Via Bellinzona 187. Pizza + bibita a 6,99 €, tutti i giorni 18:00–23:00.">
+<meta property="og:image" content="https://pizzerianumero1.d4digitalstudio.it/icon-512.png">
+
+<!--
+  ══════════════════════════════════════════════════════════════
+  NOTAS PARA DAVID
+
+  NOMBRES. "Numero 1" es la marca que ven los clientes: es la del
+  folleto y la de la ficha de Google. "Pizzeria Noi Tre di Zoheir
+  Abir Sayed Ali A." es la razón social del ticket, y va en el pie
+  y en privacy.html. No los mezcles.
+
+  PRECIOS. Aquí no hay precios inventados. La única cifra es la
+  del folleto: pizza + bibita 6,99 €, antes 10,00 €. Los
+  suplementos también salen del folleto. Si el dueño te da la
+  lista de precios sueltos, se añaden en la columna derecha del
+  menú (busca INIZIO MENU).
+
+  PENDIENTE DE VERIFICAR contra el folleto en papel:
+  - Pizza 24, cuatro estaciones: hay un quinto ingrediente que en
+    la foto no se lee. Ahora está fuera de la lista.
+  - Kebab y piadine: aparecen en el nombre del local pero no hay
+    carta en el folleto. Falta la lista.
+  ══════════════════════════════════════════════════════════════
+-->
+
+<style>
+:root{
+  color-scheme: light dark;
+  --paper:      oklch(98.2% 0.006 75);
+  --paper-2:    oklch(95.6% 0.010 72);
+  --ink:        oklch(21% 0.012 45);
+  --ink-soft:   oklch(48% 0.012 60);
+  --line:       oklch(89% 0.010 70);
+  --ember:      oklch(50% 0.148 32);
+  --ember-deep: oklch(41% 0.128 32);
+  --on-ember:   oklch(97% 0.012 70);
+  --radius: 14px;
+  --tap: 46px;
+  --measure: 62ch;
+  --ease: cubic-bezier(.22,1,.36,1);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:      oklch(19% 0.010 45);
+    --paper-2:    oklch(24% 0.012 45);
+    --ink:        oklch(94% 0.008 70);
+    --ink-soft:   oklch(72% 0.012 65);
+    --line:       oklch(32% 0.012 50);
+    --ember:      oklch(63% 0.142 34);
+    --ember-deep: oklch(30% 0.086 32);
+    --on-ember:   oklch(18% 0.014 40);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:calc(84px + env(safe-area-inset-bottom));
+}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--ember);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:99;background:var(--ink);color:var(--paper);padding:12px 16px;border-radius:8px}
+.wrap{width:100%;max-width:1060px;margin:0 auto;padding:0 20px}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:12px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;min-height:var(--tap)}
+.brand img{width:34px;height:34px;border-radius:9px}
+.brand b{display:block;font-size:16px;letter-spacing:-.02em;line-height:1.15}
+.brand span{display:block;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft)}
+.links{display:none;gap:6px}
+.links a{display:flex;align-items:center;min-height:var(--tap);padding:0 14px;text-decoration:none;font-size:15px;color:var(--ink-soft);border-radius:10px}
+.links a:hover{color:var(--ink);background:var(--paper-2)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:var(--tap);padding:0 20px;border-radius:999px;
+  background:var(--ember);color:var(--on-ember);
+  text-decoration:none;font-size:15px;font-weight:600;border:0;cursor:pointer;
+  font-family:inherit;transition:background .25s var(--ease);
+}
+.btn:hover{background:var(--ember-deep)}
+.btn.line{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.line:hover{background:var(--paper-2)}
+.btn.small{min-height:44px;font-size:14px;padding:0 16px}
+
+/* hero con la promozione */
+.hero{background:var(--ember);color:var(--on-ember);padding:44px 0 48px}
+.hero .wrap{max-width:780px}
+.place{
+  display:inline-block;font-size:11px;letter-spacing:.15em;text-transform:uppercase;
+  padding:7px 14px;border:1px solid color-mix(in oklch,var(--on-ember) 45%,transparent);
+  border-radius:999px;margin-bottom:22px;
+}
+h1{font-size:clamp(2.1rem,8.4vw,3.7rem);line-height:1.03;letter-spacing:-.035em;font-weight:800}
+.was{font-weight:600;text-decoration:line-through;text-decoration-thickness:2px;font-size:.45em;vertical-align:.42em;margin-left:6px;letter-spacing:0}
+.lede{margin-top:18px;font-size:clamp(1rem,4vw,1.18rem);max-width:44ch}
+.terms{margin-top:16px;font-size:13.5px;max-width:46ch;line-height:1.55}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero .btn{background:oklch(99% 0.006 75);color:oklch(38% 0.126 32)}
+.hero .btn:hover{background:oklch(94% 0.014 72)}
+@media (prefers-color-scheme: dark){
+  .hero .btn{background:oklch(17% 0.014 40);color:oklch(96% 0.010 70)}
+  .hero .btn:hover{background:oklch(12% 0.010 40)}
+}
+.hero .btn.line{background:transparent;color:var(--on-ember);border-color:color-mix(in oklch,var(--on-ember) 45%,transparent)}
+.hero .btn.line:hover{background:color-mix(in oklch,var(--on-ember) 14%,transparent)}
+.open{display:flex;align-items:center;gap:8px;margin-top:24px;font-size:14px}
+.led{width:8px;height:8px;border-radius:50%;background:currentColor;flex:none}
+
+/* photos */
+.shots{display:grid;gap:10px;grid-template-columns:1fr 1fr;margin:26px 0 0}
+.shot{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius);background:var(--paper-2)}
+.th{width:56px;height:56px;flex:none;margin-left:auto;border-radius:10px;object-fit:cover;background:var(--paper-2)}
+.shots .shot:first-child{grid-column:1/-1;aspect-ratio:16/10}
+
+/* sections */
+section{padding:56px 0}
+section + section{border-top:1px solid var(--line)}
+.eyebrow{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--ember);font-weight:700;margin-bottom:12px}
+h2{font-size:clamp(1.6rem,6vw,2.4rem);line-height:1.12;letter-spacing:-.03em;font-weight:800}
+h3{font-size:1.05rem;letter-spacing:-.01em}
+.sub{color:var(--ink-soft);margin-top:14px;max-width:var(--measure)}
+
+/* menu */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 6px}
+.tab{
+  min-height:var(--tap);padding:0 18px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--line);background:transparent;color:var(--ink-soft);
+  font:inherit;font-size:15px;transition:background .2s var(--ease),color .2s var(--ease);
+}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.list{display:grid;gap:0 48px;margin-top:14px}
+.list[hidden]{display:none}
+.row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.row .n{align-self:center;flex:1;min-width:0}
+.row .k{color:var(--ink-soft);font-size:13px;font-variant-numeric:tabular-nums;width:24px;flex:none}
+.row .n{font-weight:600}
+.row .d{display:block;font-size:14px;font-weight:400;color:var(--ink-soft);margin-top:2px;max-width:46ch}
+.warn{margin-top:26px;font-size:14px;color:var(--ink-soft);max-width:var(--measure)}
+.supp{margin-top:26px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper-2);padding:18px 20px;max-width:var(--measure)}
+.supp h3{margin-bottom:8px}
+.supp p{font-size:15px;color:var(--ink-soft)}
+
+/* come si ordina */
+.steps{margin-top:26px}
+.step{display:flex;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step .k{font-size:13px;font-weight:700;color:var(--ember);width:26px;flex:none;padding-top:3px;font-variant-numeric:tabular-nums}
+.step p{color:var(--ink-soft);margin-top:5px;max-width:52ch;font-size:15.5px}
+.step .btn{margin-top:14px}
+.step .btn + .btn{margin-left:8px}
+
+/* chi siamo */
+.facts{list-style:none;margin-top:26px;max-width:var(--measure)}
+.facts li{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-top:1px solid var(--line);font-size:15.5px}
+.facts li:last-child{border-bottom:1px solid var(--line)}
+.facts b{font-weight:600;text-align:right}
+.facts span{color:var(--ink-soft)}
+
+/* contatti */
+.mapwrap{display:block;position:relative;margin-top:26px;text-decoration:none;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.map{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
+.maplabel{position:absolute;left:12px;bottom:12px;background:var(--ink);color:var(--paper);padding:11px 18px;border-radius:999px;font-size:14px;font-weight:600}
+.info{margin-top:26px;max-width:var(--measure)}
+.info div{padding:14px 0;border-top:1px solid var(--line)}
+.info div:last-child{border-bottom:1px solid var(--line)}
+.info dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.info dd{font-size:17px;font-weight:600;margin-top:4px}
+.info dd a{display:inline-block;text-decoration:none;color:var(--ember);padding:12px 0;line-height:1.6}
+
+/* install */
+.install{display:none;margin-top:26px;padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper-2);max-width:var(--measure)}
+.install.on{display:block}
+.install p{color:var(--ink-soft);font-size:15px;margin:6px 0 14px}
+
+/* footer */
+footer{background:var(--ember-deep);color:var(--on-ember);padding:40px 0 44px;font-size:14px}
+@media (prefers-color-scheme: dark){footer{color:oklch(92% 0.010 70)}}
+footer a{color:inherit;display:inline-block;padding:13px 0}
+footer p{opacity:.85;margin-top:10px;line-height:1.7}
+footer .fname{opacity:1;font-weight:700;font-size:16px}
+
+/* barra fissa */
+.callbar{position:fixed;left:14px;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:60}
+.call{
+  display:flex;align-items:center;justify-content:center;min-height:54px;
+  background:var(--ink);color:var(--paper);border-radius:999px;
+  text-decoration:none;font-weight:700;font-size:16px;
+  box-shadow:0 8px 26px oklch(20% 0.02 40 / .28);
+}
+
+@media (min-width:640px){
+  .shots{grid-template-columns:repeat(3,1fr)}
+  .shots .shot:first-child{grid-column:auto;aspect-ratio:1/1}
+  .list{grid-template-columns:1fr 1fr}
+}
+@media (min-width:900px){
+  body{padding-bottom:0}
+  .links{display:flex}
+  .callbar{display:none}
+  section{padding:76px 0}
+  .hero{padding:76px 0 80px}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <img src="icon-192.png" alt="">
+      <span><b>Pizzeria Numero 1</b><span>Forno a legna · Como</span></span>
+    </a>
+    <nav class="links" aria-label="Sezioni">
+      <a href="#menu">Le pizze</a>
+      <a href="#ordinare">Ordinare</a>
+      <a href="#noi">Chi siamo</a>
+      <a href="#dove">Dove siamo</a>
+    </nav>
+    <a class="btn small" href="tel:+390312073720">Chiama</a>
+  </div>
+</header>
+
+<main id="contenuto">
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <span class="place">Via Bellinzona 187, Monte Olimpino</span>
+    <h1>Pizza + bibita<br>6,99 €<span class="was">10,00 €</span></h1>
+    <p class="lede">Trenta pizze fra cui scegliere, tutte cotte nel forno a legna. Vale tutti i giorni, fino al 31 dicembre 2026.</p>
+    <p class="terms">Con consegna a domicilio: +0,50 € a pizza, minimo 2 pizze. Il domicilio non si fa il sabato e la domenica.</p>
+    <div class="hero-cta">
+      <a class="btn" href="tel:+390312073720">Chiama 031&nbsp;2073720</a>
+      <a class="btn line" href="#menu">Le 30 pizze</a>
+    </div>
+    <p class="open"><span class="led"></span>Aperti tutti i giorni, dalle 18:00 alle 23:00</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="shots">
+    <!-- DAVID: foto prese dal catalogo Odoo di D4 Digital Studio.
+         Quando arrivano le foto vere della pizzeria, sostituisci src e srcset
+         mantenendo le stesse dimensioni. -->
+    <img class="shot" src="foto-margherita.jpg" srcset="foto-margherita-400.jpg 400w, foto-margherita.jpg 800w" sizes="(min-width:640px) 340px, 100vw" width="800" height="800" alt="Pizza margherita appena sfornata" loading="eager" fetchpriority="high" decoding="async">
+    <img class="shot" src="foto-diavola.jpg" srcset="foto-diavola-400.jpg 400w, foto-diavola.jpg 800w" sizes="(min-width:640px) 340px, 50vw" width="800" height="800" alt="Pizza diavola con salame piccante" loading="lazy" decoding="async">
+    <img class="shot" src="foto-capricciosa.jpg" srcset="foto-capricciosa-400.jpg 400w, foto-capricciosa.jpg 800w" sizes="(min-width:640px) 340px, 50vw" width="800" height="800" alt="Pizza capricciosa" loading="lazy" decoding="async">
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <p class="eyebrow">Le pizze</p>
+    <h2>Trenta pizze, tutte nella promozione.</h2>
+    <p class="sub">Qualsiasi pizza di questa lista, più una bibita, costa 6,99 €. Non ci sono pizze escluse.</p>
+
+    <div class="tabs" role="tablist" aria-label="Categorie del menù">
+      <button type="button" class="tab" role="tab" id="t-a" aria-controls="p-a" aria-selected="true" data-cat="a">Dalla 1 alla 15</button>
+      <button type="button" class="tab" role="tab" id="t-b" aria-controls="p-b" aria-selected="false" data-cat="b">Dalla 16 alla 30</button>
+      <button type="button" class="tab" role="tab" id="t-c" aria-controls="p-c" aria-selected="false" data-cat="c">Kebab e piadine</button>
+    </div>
+
+    <!-- ══ INIZIO MENU ══ -->
+    <div class="list" id="p-a" role="tabpanel" aria-labelledby="t-a" data-panel="a">
+      <div>
+        <div class="row"><span class="k">1</span><span class="n">Marinara<span class="d">Pomodoro, aglio, olio, origano</span></span></div>
+        <div class="row"><span class="k">2</span><span class="n">Margherita<span class="d">Pomodoro, mozzarella</span></span><img class="th" src="th-margherita.jpg" width="180" height="180" alt="" loading="lazy" decoding="async"></div>
+        <div class="row"><span class="k">3</span><span class="n">Napoli<span class="d">Pomodoro, mozzarella, acciughe, origano</span></span><img class="th" src="th-napoli.jpg" width="180" height="180" alt="" loading="lazy" decoding="async"></div>
+        <div class="row"><span class="k">4</span><span class="n">Rucola<span class="d">Pomodoro, mozzarella, rucola</span></span></div>
+        <div class="row"><span class="k">5</span><span class="n">Calzone liscio<span class="d">Pomodoro, mozzarella, prosciutto</span></span></div>
+        <div class="row"><span class="k">6</span><span class="n">Diavola<span class="d">Pomodoro, mozzarella, salame piccante</span></span><img class="th" src="th-diavola.jpg" width="180" height="180" alt="" loading="lazy" decoding="async"></div>
+        <div class="row"><span class="k">7</span><span class="n">Prosciutto<span class="d">Pomodoro, mozzarella, prosciutto</span></span></div>
+        <div class="row"><span class="k">8</span><span class="n">Pugliese<span class="d">Pomodoro, mozzarella, cipolla rossa, olive, origano</span></span></div>
+      </div>
+      <div>
+        <div class="row"><span class="k">9</span><span class="n">Patatine<span class="d">Pomodoro, mozzarella, patatine fritte</span></span></div>
+        <div class="row"><span class="k">10</span><span class="n">Romana<span class="d">Pomodoro, mozzarella, acciughe, capperi, olive, origano</span></span></div>
+        <div class="row"><span class="k">11</span><span class="n">Salsiccia<span class="d">Pomodoro, mozzarella, salsiccia</span></span></div>
+        <div class="row"><span class="k">12</span><span class="n">Salame dolce<span class="d">Pomodoro, mozzarella, salame dolce</span></span></div>
+        <div class="row"><span class="k">13</span><span class="n">Würstel<span class="d">Pomodoro, mozzarella, würstel</span></span></div>
+        <div class="row"><span class="k">14</span><span class="n">Capricciosa<span class="d">Pomodoro, mozzarella, farcitura, prosciutto cotto</span></span><img class="th" src="th-capricciosa.jpg" width="180" height="180" alt="" loading="lazy" decoding="async"></div>
+        <div class="row"><span class="k">15</span><span class="n">Calabrese<span class="d">Pomodoro, mozzarella, salame piccante, olive, origano</span></span></div>
+      </div>
+    </div>
+
+    <div class="list" id="p-b" role="tabpanel" aria-labelledby="t-b" data-panel="b" hidden>
+      <div>
+        <div class="row"><span class="k">16</span><span class="n">Carciofi<span class="d">Pomodoro, mozzarella, carciofi</span></span></div>
+        <div class="row"><span class="k">17</span><span class="n">Prosciutto e funghi<span class="d">Pomodoro, mozzarella, prosciutto, funghi</span></span><img class="th" src="th-prosciutto-e-funghi.jpg" width="180" height="180" alt="" loading="lazy" decoding="async"></div>
+        <div class="row"><span class="k">18</span><span class="n">Parmigiana<span class="d">Pomodoro, mozzarella, melanzane, grana</span></span></div>
+        <div class="row"><span class="k">19</span><span class="n">Contadina<span class="d">Pomodoro, mozzarella, zucchine, melanzane, peperoni</span></span><img class="th" src="th-contadina.jpg" width="180" height="180" alt="" loading="lazy" decoding="async"></div>
+        <div class="row"><span class="k">20</span><span class="n">Campagnola<span class="d">Prosciutto cotto, mozzarella, panna, mais</span></span></div>
+        <div class="row"><span class="k">21</span><span class="n">Carbonara<span class="d">Pomodoro, mozzarella, pancetta, panna, uovo</span></span></div>
+        <div class="row"><span class="k">22</span><span class="n">Calzone farcito<span class="d">Pomodoro, mozzarella, prosciutto, farcitura</span></span></div>
+        <div class="row"><span class="k">23</span><span class="n">Occhio di bue<span class="d">Pomodoro, mozzarella, prosciutto cotto, 2 uova</span></span></div>
+      </div>
+      <div>
+        <!-- DAVID: nella 24 il volantino ha un quinto ingrediente che nella foto non si legge. Verificare. -->
+        <div class="row"><span class="k">24</span><span class="n">Quattro stagioni<span class="d">Pomodoro, mozzarella, carciofi, funghi, prosciutto</span></span><img class="th" src="th-quattro-stagioni.jpg" width="180" height="180" alt="" loading="lazy" decoding="async"></div>
+        <div class="row"><span class="k">25</span><span class="n">Quattro formaggi<span class="d">Pomodoro, mozzarella, scamorza, taleggio, zola</span></span><img class="th" src="th-quattro-formaggi.jpg" width="180" height="180" alt="" loading="lazy" decoding="async"></div>
+        <div class="row"><span class="k">26</span><span class="n">Messicana<span class="d">Pomodoro, mozzarella, cipolla, peperoncino, pancetta, fagioli</span></span></div>
+        <div class="row"><span class="k">27</span><span class="n">Taranto<span class="d">Pomodoro, mozzarella, cipolla, salame piccante</span></span></div>
+        <div class="row"><span class="k">28</span><span class="n">Pepericcia<span class="d">Pomodoro, mozzarella, peperoni, salsiccia</span></span></div>
+        <div class="row"><span class="k">29</span><span class="n">Rustica<span class="d">Pomodoro, mozzarella, salsiccia, zola, cipolle</span></span></div>
+        <div class="row"><span class="k">30</span><span class="n">Zucchine e zola<span class="d">Pomodoro, mozzarella, zucchine, zola</span></span></div>
+      </div>
+    </div>
+
+    <div class="list" id="p-c" role="tabpanel" aria-labelledby="t-c" data-panel="c" hidden>
+      <div>
+        <div class="row"><span class="n">Kebab<span class="d">Nel pane o in piadina. Chiedi al telefono le salse e i prezzi del giorno.</span></span></div>
+        <div class="row"><span class="n">Piadine<span class="d">Farcite al momento.</span></span></div>
+      </div>
+      <div>
+        <!-- DAVID: qui manca la carta vera di kebab e piadine. Chiedila al proprietario e sostituisci queste due righe. -->
+        <div class="row"><span class="n">La carta completa<span class="d">Kebab e piadineria non sono nel volantino della promozione. Per ora si chiede al banco o al telefono.</span></span></div>
+      </div>
+    </div>
+    <!-- ══ FINE MENU ══ -->
+
+    <div class="supp">
+      <h3>Supplementi</h3>
+      <p>Un euro per ogni ingrediente aggiunto. Due euro per salumi, tonno o bufala.</p>
+    </div>
+
+    <p class="warn">Per allergie o intolleranze chiedi al banco o al telefono. Il registro degli allergeni è disponibile in sala, come previsto dal Reg. UE 1169/2011. Alcuni prodotti possono essere surgelati all'origine.</p>
+    <p class="warn">Prezzi in euro, IVA inclusa. Il listino valido è quello esposto in sala. Promozione valida fino al 31 dicembre 2026.</p>
+  </div>
+</section>
+
+<section id="ordinare">
+  <div class="wrap">
+    <p class="eyebrow">Ordinare</p>
+    <h2>Come si ordina.</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="k">01</span>
+        <div>
+          <h3>Chiami</h3>
+          <p>Dici quali pizze vuoi e ti diciamo quanto ci mettiamo. Puoi usare il fisso o il cellulare, rispondiamo a tutti e due.</p>
+          <a class="btn" href="tel:+390312073720">031&nbsp;2073720</a>
+          <a class="btn line" href="tel:+393334430164">333&nbsp;4430164</a>
+        </div>
+      </div>
+      <div class="step">
+        <span class="k">02</span>
+        <div>
+          <h3>Passi a ritirare</h3>
+          <p>Siamo in Via Bellinzona 187, a Monte Olimpino. Si paga in contanti, con carta o col telefono.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="k">03</span>
+        <div>
+          <h3>Oppure te lo portiamo</h3>
+          <p>La consegna costa 0,50 € in più a pizza e parte da due pizze. Dal lunedì al venerdì. Il sabato e la domenica non consegniamo, si ritira in pizzeria.</p>
+          <!-- DAVID: conferma con il proprietario fin dove arriva la consegna. Adesso non lo diciamo. -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="noi">
+  <div class="wrap">
+    <p class="eyebrow">Chi siamo</p>
+    <h2>Forno a legna, in Via Bellinzona.</h2>
+    <p class="sub">Pizzeria d'asporto, kebab e piadineria a Monte Olimpino. La pizza esce dal forno a legna, non da un forno elettrico, e la stendiamo quando arriva l'ordine.</p>
+    <p class="sub">Ci trovi anche come Al Numero 1: stesso posto, stesso telefono.</p>
+    <ul class="facts">
+      <li><span>Orario</span><b>Tutti i giorni, 18:00–23:00</b></li>
+      <li><span>Come si mangia</span><b>D'asporto o a domicilio</b></li>
+      <li><span>Domicilio</span><b>Dal lunedì al venerdì</b></li>
+      <li><span>Pagamenti</span><b>Contanti, carte, contactless</b></li>
+    </ul>
+  </div>
+</section>
+
+<section id="dove">
+  <div class="wrap">
+    <p class="eyebrow">Dove siamo</p>
+    <h2>Via Bellinzona 187, Monte Olimpino.</h2>
+    <a class="mapwrap" href="https://maps.app.goo.gl/hqWGvpCXQUtksS8U6" rel="noopener">
+      <img class="map" src="mappa.jpg" srcset="mappa-480.jpg 480w, mappa.jpg 960w" sizes="(min-width:640px) 960px, 100vw"
+           width="960" height="540" loading="lazy" decoding="async"
+           alt="Mappa di Via Bellinzona 187 a Monte Olimpino, Como">
+      <span class="maplabel">Apri le indicazioni stradali</span>
+    </a>
+    <dl class="info">
+      <div><dt>Indirizzo</dt><dd><a href="https://maps.app.goo.gl/hqWGvpCXQUtksS8U6">Via Bellinzona 187, 22100 Como</a></dd></div>
+      <div><dt>Telefono</dt><dd><a href="tel:+390312073720">031&nbsp;2073720</a></dd></div>
+      <div><dt>Cellulare</dt><dd><a href="tel:+393334430164">333&nbsp;4430164</a></dd></div>
+      <div><dt>Orario</dt><dd>Lunedì–domenica, 18:00–23:00</dd></div>
+    </dl>
+
+    <div class="install" id="install">
+      <h3>Tieni il menù sul telefono</h3>
+      <p>Aggiungi Numero 1 alla schermata iniziale: si apre come un'app, anche senza connessione.</p>
+      <button class="btn" id="install-btn" type="button">Aggiungi alla schermata iniziale</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="fname">Pizzeria d'asporto &amp; Kebab Numero 1</p>
+    <p>
+      Forno a legna, di Ahmed<br>
+      Via Bellinzona 187, 22100 Como (CO)<br>
+      <a href="tel:+390312073720">031&nbsp;2073720</a> · <a href="tel:+393334430164">333&nbsp;4430164</a>
+    </p>
+    <p>
+      Ragione sociale: Pizzeria Noi Tre di Zoheir Abir Sayed Ali A.<br>
+      P.IVA 04221150131
+    </p>
+    <p><a href="privacy.html">Privacy policy</a></p>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Azione rapida">
+  <a class="call" href="tel:+390312073720">Chiama e ordina</a>
+</nav>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Pizzeria Numero 1","alternateName":["Pizzeria & Kebab Al Numero 1","Pizzeria Noi Tre"],"legalName":"Pizzeria Noi Tre di Zoheir Abir Sayed Ali A.","description":"Pizzeria d'asporto, kebab e piadineria con forno a legna a Monte Olimpino, Como. Pizza e bibita a 6,99 euro, tutti i giorni dalle 18:00 alle 23:00.","servesCuisine":["Pizza","Kebab","Italiana"],"telephone":"+39 031 2073720","priceRange":"€","currenciesAccepted":"EUR","paymentAccepted":"Contanti, Carte di credito, Carte di debito, Contactless","vatID":"IT04221150131","address":{"@type":"PostalAddress","streetAddress":"Via Bellinzona 187","addressLocality":"Como","postalCode":"22100","addressRegion":"CO","addressCountry":"IT"},"geo":{"@type":"GeoCoordinates","latitude":45.8268026,"longitude":9.0480389},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"18:00","closes":"23:00"}],"url":"https://pizzerianumero1.d4digitalstudio.it/","image":"https://pizzerianumero1.d4digitalstudio.it/icon-512.png","hasMap":"https://maps.app.goo.gl/hqWGvpCXQUtksS8U6","hasDeliveryMethod":["http://purl.org/goodrelations/v1#DeliveryModePickUp","http://purl.org/goodrelations/v1#DeliveryModeOwnFleet"],"acceptsReservations":false}
+</script>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var cat = tab.dataset.cat;
+      tabs.forEach(function(t){ t.setAttribute('aria-selected', String(t === tab)); });
+      document.querySelectorAll('[data-panel]').forEach(function(p){ p.hidden = p.dataset.panel !== cat; });
+    });
+    tab.addEventListener('keydown', function(e){
+      var list = Array.prototype.slice.call(tabs), i = list.indexOf(tab);
+      if(e.key === 'ArrowRight'){ list[(i+1)%list.length].focus(); list[(i+1)%list.length].click(); }
+      if(e.key === 'ArrowLeft'){ list[(i-1+list.length)%list.length].focus(); list[(i-1+list.length)%list.length].click(); }
+    });
+  });
+
+  var deferred = null;
+  var box = document.getElementById('install');
+  var btn = document.getElementById('install-btn');
+  window.addEventListener('beforeinstallprompt', function(e){
+    e.preventDefault(); deferred = e; box.classList.add('on');
+  });
+  btn.addEventListener('click', function(){
+    if(!deferred) return;
+    deferred.prompt();
+    deferred.userChoice.then(function(){ deferred = null; box.classList.remove('on'); });
+  });
+  window.addEventListener('appinstalled', function(){ box.classList.remove('on'); });
+
+  if('serviceWorker' in navigator && window.isSecureContext){
+    window.addEventListener('load', function(){
+      navigator.serviceWorker.register('sw.js').catch(function(){});
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

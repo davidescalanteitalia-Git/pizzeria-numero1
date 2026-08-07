@@ -1,0 +1,132 @@
+CÓMO PUBLICAR EN pizzerianumero1.d4digitalstudio.it
+====================================================
+No publicar todavía. Primero completar la lista de abajo.
+
+
+ANTES DE PUBLICAR: LO QUE FALTA
+-------------------------------
+
+[ ] 1. CORREO PARA LA PRIVACY POLICY
+       Archivo: privacy.html
+       Buscar: INDIRIZZO@ESEMPIO.IT
+       Es obligatorio (art. 13 GDPR). Sin esto no se publica.
+
+[ ] 2. QUINTO INGREDIENTE DE LA PIZZA 24, QUATTRO STAGIONI
+       Archivo: index.html, busca "Quattro stagioni"
+       En la foto del folleto no se lee. Míralo en el papel.
+
+[ ] 3. CARTA DE KEBAB Y PIADINE
+       Archivo: index.html, pestaña "Kebab e piadine"
+       Ahora hay un texto provisional que remite a llamar.
+
+[ ] 4. HASTA DÓNDE LLEGA EL REPARTO
+       Archivo: index.html, apartado "Oppure te lo portiamo"
+
+[ ] 5. FOTOS REALES
+       Ahora la web usa fotos del catálogo Odoo de D4 Digital
+       Studio (pizzeria.d4digitalstudio.it). Son pizzas
+       genéricas, no las de Numero 1.
+       Sustituirlas por fotos reales cuando lleguen:
+       instrucciones dentro de index.html, busca
+       "quando arrivano le foto vere".
+       Sigue faltando lo más valioso: una foto del HORNO DE
+       LEÑA encendido y una del kebab. Eso no lo hay en el
+       catálogo, solo lo puede hacer el dueño con el móvil.
+
+[ ] 6. ¿WHATSAPP EN EL 333 4430164?
+
+[ ] 7. HORARIO EN GOOGLE MAPS
+       La ficha dice medianoche, el folleto dice 23:00.
+
+
+SOBRE LAS FOTOS QUE HAY AHORA
+-----------------------------
+Vienen del catálogo Odoo de D4 Digital Studio. Son pizzas
+genéricas, no las que hace Numero 1.
+
+Se descartó a propósito la foto de la marinara del catálogo:
+llevaba mozzarella, y la marinara no lleva queso. Habría
+contradicho la lista de ingredientes de al lado. Esa fila se
+quedó sin foto.
+
+Conviene sustituirlas por fotos reales en cuanto se pueda. El
+art. 7 del Reg. UE 1169/2011 prohíbe que la presentación y la
+publicidad de un alimento induzcan a error, y eso incluye las
+imágenes. Una pizza genérica es defendible; una que muestre
+ingredientes que no lleva, no.
+
+Las ilustraciones (ill-pizza, ill-forno, ill-kebab) siguen en
+la carpeta por si hacen falta.
+
+
+DÓNDE ESTÁ EL DOMINIO
+---------------------
+d4digitalstudio.it tiene el DNS en Cloudflare
+(nameservers chin.ns.cloudflare.com y kenneth.ns.cloudflare.com).
+El subdominio pizzerianumero1 todavía no existe.
+
+
+OPCIÓN A — CLOUDFLARE PAGES (la más simple)
+-------------------------------------------
+El DNS ya está en Cloudflare, así que no hay que tocar
+nameservers ni esperar propagación.
+
+1. dash.cloudflare.com
+2. Workers & Pages > Create > Pages
+3. "Upload assets" (subida directa, sin GitHub)
+4. Nombre del proyecto: pizzerianumero1
+5. Arrastra el CONTENIDO de esta carpeta, no la carpeta.
+   index.html tiene que quedar en la raíz del proyecto.
+6. Deploy. Te da una URL tipo pizzerianumero1.pages.dev
+7. Custom domains > Set up a custom domain
+8. Escribe: pizzerianumero1.d4digitalstudio.it
+9. Cloudflare crea el DNS solo y emite el certificado.
+   Tarda entre uno y quince minutos.
+
+Para actualizar después: "Create new deployment", vuelves a
+arrastrar los archivos. La URL no cambia.
+
+
+OPCIÓN B — NETLIFY CON EL DOMINIO EN CLOUDFLARE
+-----------------------------------------------
+1. app.netlify.com/drop, arrastra la carpeta.
+2. Domain management > Add domain
+3. pizzerianumero1.d4digitalstudio.it
+4. En Cloudflare, DNS > Add record:
+      Tipo:    CNAME
+      Nombre:  pizzerianumero1
+      Destino: lo-que-te-dio-netlify.netlify.app
+      Proxy:   DNS only (nube GRIS, no naranja)
+
+   Si dejas la nube naranja, Netlify no puede emitir el
+   certificado y la web da error de seguridad.
+
+
+OPCIÓN C — HOSTING PROPIO POR FTP
+---------------------------------
+1. Crea el subdominio desde el panel.
+2. Sube todos los archivos a la raíz de ese subdominio.
+3. Comprueba que hay https. Sin https no funciona la
+   instalación como app ni el modo sin conexión.
+
+
+DESPUÉS DE PUBLICAR: CINCO MINUTOS
+----------------------------------
+[ ] Abrir la web en el móvil y ver el candado de https
+[ ] Tocar el botón de llamar, debe abrir el marcador
+[ ] Bajar del todo: debe salir "Aggiungi alla schermata iniziale"
+[ ] Modo avión y recargar: la web debe seguir viéndose
+[ ] Pegar la dirección en Google Maps, campo "Sito web"
+[ ] Pasarla por search.google.com/test/rich-results
+
+
+YA PREPARADO PARA ESE DOMINIO
+-----------------------------
+- canonical y og:url
+- sitemap.xml y robots.txt
+- datos estructurados con la URL, horario 18:00-23:00,
+  coordenadas y P.IVA
+- manifest y service worker para instalarse como app
+
+Si el dominio final es otro, cámbialo en index.html,
+privacy.html, sitemap.xml y robots.txt.

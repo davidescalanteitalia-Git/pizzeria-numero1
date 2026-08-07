@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pizzerianumero1.d4digitalstudio.it/sitemap.xml
