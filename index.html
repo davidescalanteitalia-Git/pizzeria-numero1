@@ -160,10 +160,21 @@ section.hero .btn.line{background:oklch(20% 0.02 30 / .45);color:oklch(97% 0.012
 section.hero .btn.line:hover{background:oklch(20% 0.02 30 / .65)}
 
 /* photos */
-.shots{display:grid;gap:10px;grid-template-columns:1fr 1fr;margin:26px 0 0}
-.shot{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius);background:var(--paper-2)}
 .th{width:56px;height:56px;flex:none;margin-left:auto;border-radius:10px;object-fit:cover;background:var(--paper-2)}
-.shots .shot:first-child{grid-column:1/-1;aspect-ratio:16/10}
+
+/* le più richieste */
+.feat-grid{display:grid;gap:14px;grid-template-columns:repeat(2,1fr);margin-top:26px}
+.feat-card{display:block;text-decoration:none;color:inherit;background:var(--paper-2);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  transition:border-color .2s var(--ease)}
+.feat-card:hover{border-color:var(--ember)}
+.feat-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:var(--paper)}
+.feat-body{padding:12px 14px 14px}
+.feat-tag{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ember);font-weight:700;margin-bottom:6px}
+.feat-card b{display:block;font-size:15.5px;letter-spacing:-.01em;font-weight:600}
+.feat-card em{display:block;font-style:normal;font-size:13px;color:var(--ink-soft);
+  margin-top:3px;font-weight:400}
 
 /* sections */
 section{padding:56px 0}
@@ -248,8 +259,7 @@ footer li{margin-bottom:6px}
 }
 
 @media (min-width:640px){
-  .shots{grid-template-columns:repeat(3,1fr)}
-  .shots .shot:first-child{grid-column:auto;aspect-ratio:1/1}
+  .feat-grid{grid-template-columns:repeat(3,1fr)}
   .list{grid-template-columns:1fr 1fr}
 }
 @media (min-width:900px){
@@ -257,6 +267,7 @@ footer li{margin-bottom:6px}
   .links{display:flex}
   .callbar{display:none}
   section{padding:76px 0}
+  .feat-grid{grid-template-columns:repeat(5,1fr)}
   .hero{padding:76px 0 80px}
 }
 </style>
@@ -297,16 +308,59 @@ footer li{margin-bottom:6px}
   </div>
 </div>
 
-<div class="wrap">
-  <div class="shots">
-    <!-- DAVID: foto prese dal catalogo Odoo di D4 Digital Studio.
-         Quando arrivano le foto vere della pizzeria, sostituisci src e srcset
-         mantenendo le stesse dimensioni. -->
-    <img class="shot" src="foto-margherita.jpg" srcset="foto-margherita-400.jpg 400w, foto-margherita.jpg 800w" sizes="(min-width:640px) 340px, 100vw" width="800" height="800" alt="Pizza margherita appena sfornata" loading="eager" fetchpriority="high" decoding="async">
-    <img class="shot" src="foto-diavola.jpg" srcset="foto-diavola-400.jpg 400w, foto-diavola.jpg 800w" sizes="(min-width:640px) 340px, 50vw" width="800" height="800" alt="Pizza diavola con salame piccante" loading="lazy" decoding="async">
-    <img class="shot" src="foto-capricciosa.jpg" srcset="foto-capricciosa-400.jpg 400w, foto-capricciosa.jpg 800w" sizes="(min-width:640px) 340px, 50vw" width="800" height="800" alt="Pizza capricciosa" loading="lazy" decoding="async">
+<section id="richieste">
+  <div class="wrap">
+    <p class="eyebrow">Le più richieste</p>
+    <h2>Le pizze che chiedono di più.</h2>
+    <!-- DAVID: le 5 pizze qui sotto sono una stima nostra (le classiche più
+         ordinate in qualsiasi pizzeria italiana), non un dato confermato da
+         Ahmed. Aggiorna questa lista appena lui conferma quali sono davvero
+         le più vendute. -->
+    <p class="sub">Le cinque che si ordinano più spesso. Le altre venticinque sono qui sotto, nella carta completa.</p>
+    <div class="feat-grid">
+      <a class="feat-card" href="#menu">
+        <img src="foto-margherita.jpg" srcset="foto-margherita-400.jpg 400w, foto-margherita.jpg 800w" sizes="(min-width:900px) 20vw, (min-width:640px) 30vw, 45vw" width="800" height="800" alt="Pizza margherita appena sfornata" loading="eager" fetchpriority="high" decoding="async">
+        <div class="feat-body">
+          <span class="feat-tag">La chiedono in tanti</span>
+          <b>Margherita</b>
+          <em>Pomodoro, mozzarella</em>
+        </div>
+      </a>
+      <a class="feat-card" href="#menu">
+        <img src="foto-diavola.jpg" srcset="foto-diavola-400.jpg 400w, foto-diavola.jpg 800w" sizes="(min-width:900px) 20vw, (min-width:640px) 30vw, 45vw" width="800" height="800" alt="Pizza diavola con salame piccante" loading="lazy" decoding="async">
+        <div class="feat-body">
+          <span class="feat-tag">La chiedono in tanti</span>
+          <b>Diavola</b>
+          <em>Pomodoro, mozzarella, salame piccante</em>
+        </div>
+      </a>
+      <a class="feat-card" href="#menu">
+        <img src="foto-capricciosa.jpg" srcset="foto-capricciosa-400.jpg 400w, foto-capricciosa.jpg 800w" sizes="(min-width:900px) 20vw, (min-width:640px) 30vw, 45vw" width="800" height="800" alt="Pizza capricciosa" loading="lazy" decoding="async">
+        <div class="feat-body">
+          <span class="feat-tag">La chiedono in tanti</span>
+          <b>Capricciosa</b>
+          <em>Pomodoro, mozzarella, farcitura, prosciutto cotto</em>
+        </div>
+      </a>
+      <a class="feat-card" href="#menu">
+        <img src="th-quattro-stagioni.jpg" width="180" height="180" alt="Pizza quattro stagioni" loading="lazy" decoding="async">
+        <div class="feat-body">
+          <span class="feat-tag">La chiedono in tanti</span>
+          <b>Quattro stagioni</b>
+          <em>Pomodoro, mozzarella, carciofi, funghi, prosciutto, olive</em>
+        </div>
+      </a>
+      <a class="feat-card" href="#menu">
+        <img src="th-quattro-formaggi.jpg" width="180" height="180" alt="Pizza quattro formaggi" loading="lazy" decoding="async">
+        <div class="feat-body">
+          <span class="feat-tag">La chiedono in tanti</span>
+          <b>Quattro formaggi</b>
+          <em>Pomodoro, mozzarella, scamorza, taleggio, zola</em>
+        </div>
+      </a>
+    </div>
   </div>
-</div>
+</section>
 
 <section id="menu">
   <div class="wrap">
