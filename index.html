@@ -138,10 +138,18 @@ img{max-width:100%;display:block}
     url('forno-a-legna-pizzeria-como.jpg');
   background-size:cover;background-position:center;background-repeat:no-repeat;
 }
+.hero-video{display:none;position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none}
+.hero-scrim{display:none;position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(100deg, oklch(16% 0.03 30 / .82) 0%, oklch(16% 0.03 30 / .68) 46%, oklch(18% 0.04 32 / .38) 100%);
+}
+@media (min-width:601px) and (prefers-reduced-motion: no-preference){
+  .hero-video{display:block}
+  .hero-scrim{display:block}
+}
 .hero-glow{display:none}
 @media (hover:hover) and (pointer:fine){
   .hero-glow{
-    display:block;position:absolute;inset:0;z-index:1;pointer-events:none;
+    display:block;position:absolute;inset:0;z-index:2;pointer-events:none;
     background:radial-gradient(360px circle at var(--mx,50%) var(--my,30%), oklch(78% 0.15 45 / .30), transparent 65%);
     opacity:0;transition:opacity .5s var(--ease);
   }
@@ -158,7 +166,7 @@ img{max-width:100%;display:block}
 .hero h1{text-shadow:0 1px 12px oklch(15% 0.02 30 / .5)}
 .hero .lede{text-shadow:0 1px 8px oklch(15% 0.02 30 / .6)}
 .hero .terms, .hero .open{text-shadow:0 1px 6px oklch(15% 0.02 30 / .7)}
-.hero .wrap{max-width:780px;position:relative;z-index:2}
+.hero .wrap{max-width:780px;position:relative;z-index:3}
 .place{
   display:inline-block;font-size:11px;letter-spacing:.15em;text-transform:uppercase;
   padding:7px 14px;border:1px solid color-mix(in oklch,var(--on-ember) 45%,transparent);
@@ -419,6 +427,10 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
 <main id="contenuto">
 
 <div class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" poster="forno-a-legna-pizzeria-como.jpg" onerror="this.style.display='none'">
+    <source src="forno-a-legna-pizzeria-como.mp4" type="video/mp4">
+  </video>
+  <div class="hero-scrim" aria-hidden="true"></div>
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="wrap">
     <span class="place">Via Bellinzona 187, Monte Olimpino</span>
