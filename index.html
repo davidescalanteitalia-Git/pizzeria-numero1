@@ -320,12 +320,14 @@ footer li{margin-bottom:6px}
   .feat-grid{grid-template-columns:repeat(5,1fr)}
   .hero{padding:76px 0 80px}
 
-  dialog#sheet{max-width:920px}
-  #sheet .sheet-scroll{display:flex;flex-direction:row;height:min(84dvh,760px);max-height:none}
-  #sheet .sheet-photo{order:2;flex:0 0 42%;min-width:0;height:100%}
-  #sheet .sheet-photo img{height:100%;aspect-ratio:auto}
-  #sheet .sheet-main{order:1;flex:1 1 58%;min-width:0;min-height:0;
-    overflow-y:auto;display:flex;flex-direction:column}
+  dialog#sheet{max-width:1120px}
+  #sheet .sheet-scroll{display:flex;flex-direction:row;align-items:flex-start;
+    max-height:min(88dvh,820px)}
+  #sheet .sheet-photo{order:2;flex:0 0 52%;min-width:0}
+  /* img keeps aspect-ratio:1/1 from the base rule below: the real photos are
+     already square (800x800), so cover never crops them once the box matches */
+  #sheet .sheet-main{order:1;flex:1 1 48%;min-width:0;min-height:0;
+    max-height:min(88dvh,820px);overflow-y:auto;display:flex;flex-direction:column}
   #sheet .sheet-body{flex:1}
 }
 
@@ -358,6 +360,10 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
   appearance:none;-webkit-appearance:none;transition:background .2s var(--ease),border-color .2s var(--ease)}
 .chip[aria-pressed="false"]{border-color:var(--line);background:transparent;color:var(--ink-soft);
   text-decoration:line-through;text-decoration-color:var(--ink-soft)}
+.chip--icon{display:inline-flex;align-items:center;gap:7px;padding-left:6px}
+.chip--icon img{width:22px;height:22px;border-radius:50%;object-fit:cover;flex:0 0 auto;
+  opacity:1;transition:opacity .2s var(--ease)}
+.chip--icon[aria-pressed="false"] img{opacity:.45}
 .hint{font-size:13px;color:var(--ink-soft);margin-top:10px}
 .sheet-allergy{margin-top:16px;padding:11px 13px;border:1px dashed var(--line);
   border-radius:10px;font-size:13px;color:var(--ink-soft)}
@@ -871,6 +877,11 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
   var PIZZA_PRICE = 6.99, DELIVERY_FEE = 0.5, EXTRA_PRICE = 1.00;
   var DRINK_KEYS = ['cocacola', 'fanta', 'sprite', 'acqua'];
   var EXTRA_KEYS = ['mozzarella', 'salame', 'wurstel', 'funghi', 'olive', 'tonno', 'bufala', 'prosciutto'];
+  var ING_ICON = {"it": {"pomodoro": "pomodoro", "aglio": "aglio", "olio": "olio", "origano": "origano", "mozzarella": "mozzarella", "acciughe": "acciughe", "capperi": "capperi", "olive": "olive", "salsiccia": "salsiccia", "salame dolce": "salame-dolce", "würstel": "wurstel", "prosciutto cotto": "prosciutto", "salame piccante": "salame", "carciofi": "carciofi", "prosciutto": "prosciutto", "funghi": "funghi", "melanzane": "melanzane", "grana": "grana", "zucchine": "zucchine", "peperoni": "peperoni", "panna": "panna", "mais": "mais", "pancetta": "pancetta", "uovo": "uovo", "2 uova": "uovo", "scamorza": "scamorza", "taleggio": "taleggio", "zola": "zola", "cipolla": "cipolla", "peperoncino": "peperoncino", "fagioli": "fagioli", "cipolle": "cipolla", "rucola": "rucola", "cipolla rossa": "cipolla-rossa", "patatine fritte": "patatine-fritte"}, "en": {"tomato": "pomodoro", "garlic": "aglio", "oil": "olio", "oregano": "origano", "mozzarella": "mozzarella", "anchovies": "acciughe", "capers": "capperi", "olives": "olive", "italian sausage": "salsiccia", "mild salami": "salame-dolce", "frankfurters": "wurstel", "cooked ham": "prosciutto", "spicy salami": "salame", "artichokes": "carciofi", "ham": "prosciutto", "mushrooms": "funghi", "eggplant": "melanzane", "grana cheese": "grana", "zucchini": "zucchine", "peppers": "peperoni", "cream": "panna", "corn": "mais", "bacon": "pancetta", "egg": "uovo", "2 eggs": "uovo", "scamorza": "scamorza", "taleggio": "taleggio", "gorgonzola": "zola", "onion": "cipolla", "chili pepper": "peperoncino", "beans": "fagioli", "onions": "cipolla", "arugula": "rucola", "red onion": "cipolla-rossa", "fries": "patatine-fritte"}, "es": {"tomate": "pomodoro", "ajo": "aglio", "aceite": "olio", "orégano": "origano", "mozzarella": "mozzarella", "anchoas": "acciughe", "alcaparras": "capperi", "aceitunas": "olive", "salchicha italiana": "salsiccia", "salami dulce": "salame-dolce", "salchichas": "wurstel", "jamón cocido": "prosciutto", "salami picante": "salame", "alcachofas": "carciofi", "jamón": "prosciutto", "champiñones": "funghi", "berenjena": "melanzane", "queso grana": "grana", "calabacín": "zucchine", "pimientos": "peperoni", "nata": "panna", "maíz": "mais", "panceta": "pancetta", "huevo": "uovo", "2 huevos": "uovo", "scamorza": "scamorza", "taleggio": "taleggio", "gorgonzola": "zola", "cebolla": "cipolla", "chile": "peperoncino", "frijoles": "fagioli", "cebollas": "cipolla", "rúcula": "rucola", "cebolla roja": "cipolla-rossa", "patatas fritas": "patatine-fritte"}, "de": {"tomate": "pomodoro", "knoblauch": "aglio", "öl": "olio", "oregano": "origano", "mozzarella": "mozzarella", "sardellen": "acciughe", "kapern": "capperi", "oliven": "olive", "italienische wurst": "salsiccia", "milde salami": "salame-dolce", "würstel": "wurstel", "gekochter schinken": "prosciutto", "scharfe salami": "salame", "artischocken": "carciofi", "schinken": "prosciutto", "pilze": "funghi", "aubergine": "melanzane", "grana-käse": "grana", "zucchini": "zucchine", "paprika": "peperoni", "sahne": "panna", "mais": "mais", "speck": "pancetta", "ei": "uovo", "2 eier": "uovo", "scamorza": "scamorza", "taleggio": "taleggio", "gorgonzola": "zola", "zwiebel": "cipolla", "peperoncino": "peperoncino", "bohnen": "fagioli", "zwiebeln": "cipolla", "rucola": "rucola", "rote zwiebel": "cipolla-rossa", "pommes frites": "patatine-fritte"}};
+  function iconFor(text){
+    var m = ING_ICON[curLang()] || ING_ICON.it;
+    return m[String(text).trim().toLowerCase()] || null;
+  }
   var order = [], current = null, consegna = false;
   function curLang(){ return document.documentElement.getAttribute('lang') || 'it'; }
   function dict(){ return I18N[curLang()] || I18N.it; }
@@ -920,8 +931,23 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
     ingredientsFor(id, curLang()).forEach(function(ing, i){
       var c = document.createElement('button');
       c.type = 'button';
-      c.className = 'chip';
-      c.textContent = ing;
+      var icoKey = iconFor(ing);
+      c.className = icoKey ? 'chip chip--icon' : 'chip';
+      if(icoKey){
+        var im0 = document.createElement('img');
+        im0.src = 'icon-' + icoKey + '.webp';
+        im0.alt = '';
+        im0.width = 22;
+        im0.height = 22;
+        im0.loading = 'lazy';
+        im0.decoding = 'async';
+        c.appendChild(im0);
+        var lbl0 = document.createElement('span');
+        lbl0.textContent = ing;
+        c.appendChild(lbl0);
+      } else {
+        c.textContent = ing;
+      }
       c.setAttribute('aria-pressed', 'true');
       c.addEventListener('click', function(){
         var on = c.getAttribute('aria-pressed') === 'true';
@@ -938,8 +964,18 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
       EXTRA_KEYS.forEach(function(key){
         var c = document.createElement('button');
         c.type = 'button';
-        c.className = 'chip';
-        c.textContent = d1['extra_' + key];
+        c.className = 'chip chip--icon';
+        var im = document.createElement('img');
+        im.src = 'icon-' + key + '.webp';
+        im.alt = '';
+        im.width = 22;
+        im.height = 22;
+        im.loading = 'lazy';
+        im.decoding = 'async';
+        c.appendChild(im);
+        var lbl = document.createElement('span');
+        lbl.textContent = d1['extra_' + key];
+        c.appendChild(lbl);
         c.setAttribute('aria-pressed', 'false');
         c.addEventListener('click', function(){
           var on = c.getAttribute('aria-pressed') === 'true';
@@ -959,8 +995,18 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
       DRINK_KEYS.forEach(function(key){
         var c = document.createElement('button');
         c.type = 'button';
-        c.className = 'chip';
-        c.textContent = d0['drink_' + key];
+        c.className = 'chip chip--icon';
+        var imD = document.createElement('img');
+        imD.src = 'icon-' + key + '.webp';
+        imD.alt = '';
+        imD.width = 22;
+        imD.height = 22;
+        imD.loading = 'lazy';
+        imD.decoding = 'async';
+        c.appendChild(imD);
+        var lblD = document.createElement('span');
+        lblD.textContent = d0['drink_' + key];
+        c.appendChild(lblD);
         c.setAttribute('aria-pressed', String(key === current.drink));
         c.addEventListener('click', function(){
           current.drink = key;
