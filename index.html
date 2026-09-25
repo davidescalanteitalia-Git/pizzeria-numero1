@@ -333,8 +333,8 @@ footer li{margin-bottom:6px}
 
 /* whatsapp flotante */
 .wa-float{
-  position:fixed;left:14px;bottom:calc(82px + env(safe-area-inset-bottom));z-index:61;
-  width:56px;height:56px;border-radius:50%;overflow:hidden;display:block;
+  position:fixed;right:14px;bottom:calc(82px + env(safe-area-inset-bottom));z-index:61;
+  width:70px;height:70px;border-radius:50%;overflow:hidden;display:block;
   background:var(--paper);box-shadow:0 8px 22px oklch(20% 0.02 40 / .32);
   transition:transform .15s var(--ease),box-shadow .15s var(--ease);
 }
@@ -345,7 +345,9 @@ footer li{margin-bottom:6px}
 }
 @media (prefers-reduced-motion:reduce){.wa-float{transition:none}}
 @media (min-width:900px){
-  .wa-float{left:24px;bottom:24px;width:60px;height:60px}
+  /* la barra del carrito puede aparecer en right:24/bottom:24 (54px alto);
+     se deja despejada arriba de esa zona */
+  .wa-float{right:24px;bottom:92px;width:75px;height:75px}
 }
 
 @media (min-width:640px){
@@ -838,7 +840,7 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
 </dialog>
 
 <a class="wa-float" href="https://wa.me/393334430164" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp" data-i18n-aria="step1_whatsapp">
-  <img src="icon-whatsapp-pizza.png" alt="" width="60" height="60">
+  <img src="icon-whatsapp-pizza.png" alt="" width="75" height="75">
 </a>
 
 <script type="application/ld+json">
