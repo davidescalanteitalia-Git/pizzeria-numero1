@@ -1231,7 +1231,13 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
     lines.push('Telefono: ' + telefono);
     if(email) lines.push('Email: ' + email);
 
-    // Copia a D4 (lead + consenso marketing). Non blocca l'invio su WhatsApp.
+    // DISATTIVATO 2026-09-25: quell'endpoint ('d4-form-web') è dedicato a Don Segundo
+    // Sombra, non è multi-sito. Un ordine di prova è arrivato con il nome/branding di
+    // Don Segundo Sombra. Da riattivare solo quando esiste un webhook/workflow n8n
+    // dedicato a Pizzeria Numero 1 (o uno multi-sito vero, che smisti per "sitio").
+    // Il consenso al marketing (coMarketing) resta salvato solo nel messaggio WhatsApp
+    // per ora: non c'è ancora nessun posto dove si registra in modo automatico.
+    /*
     try{
       var d4campos = [];
       d4campos.push({k:'Modalità', v: consegna ? 'Consegna a domicilio' : 'Ritiro in pizzeria'});
@@ -1254,6 +1260,7 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
         body: JSON.stringify(d4payload)
       }).catch(function(){});
     }catch(_e){}
+    */
 
     location.href = 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(lines.join('\n'));
   });
