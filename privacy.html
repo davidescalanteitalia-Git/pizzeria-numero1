@@ -15,7 +15,26 @@
   DAVID: prima di pubblicare, verifica con il proprietario
   1. [FATTO 2026-08-29] l'indirizzo email di contatto: pizzerianumero1como@gmail.com
   2. per quanti giorni l'hosting conserva i log di accesso (server Coolify/Hetzner: chiedere a D4)
-  3. il numero REA sulla visura camerale, se lo si vuole aggiungere
+  3. il numero REA sulla visura camerale, se lo si vuole aggiungere (facoltativo, non obbligatorio online)
+  4. [NUOVO 2026-09-06, aggiornata la sezione "Quali dati raccoglie questo sito": ora il sito ha
+     carrello e modulo d'ordine (nome, telefono, indirizzo), la vecchia frase "non ha carrello"
+     era superata dalla funzione WhatsApp aggiunta dopo. Rivedere con il proprietario se cambia
+     ancora il flusso d'ordine]
+  5. [NUOVO 2026-09-06] "prima 10,00 € / ora 6,99 €" in home: verificare con Ahmed che 10,00 € sia
+     stato davvero il prezzo applicato nei 30 giorni precedenti la promozione (art. 17-bis Codice
+     del Consumo, disciplina Omnibus). Se la promozione è ormai permanente, valutare di toglierla
+     o di mostrare solo il prezzo attuale.
+  6. [NUOVO 2026-09-06] "Prezzi in euro, IVA inclusa" nel footer del sito: verificare con il
+     commercialista se la ditta è in regime forfettario. In quel caso non si applica l'IVA e la
+     frase andrebbe cambiata (es. "IVA non addebitata ai sensi del regime forfettario").
+  7. [NUOVO 2026-09-25] Aggiunto al checkout un campo email facoltativo e una casella di consenso
+     separata per ricevere offerte via email. L'ordine (nome, telefono, indirizzo, email se data,
+     scelta sul marketing) viene ora inviato in automatico, oltre che su WhatsApp, anche a D4
+     Digital Studio (che gestisce il sito) tramite un webhook tecnico, per tenere traccia degli
+     ordini e delle richieste di marketing. IMPORTANTE per David: se non esiste già, serve un
+     accordo scritto di nomina di D4 Digital Studio come responsabile del trattamento (art. 28
+     GDPR) da parte del titolare (Pizzeria Noi Tre). Verificare anche che il workflow che riceve
+     questi dati conservi la scelta di marketing con data/ora, per poter dimostrare il consenso.
 -->
 
 <style>
@@ -73,17 +92,45 @@ footer a{display:inline-block;padding:8px 0}
 
   <h2>Quali dati raccoglie questo sito</h2>
   <p>
-    Questo sito non ha moduli di contatto, non ha carrello, non registra utenti e non invia newsletter.
-    Non chiediamo nessun dato in modo diretto.
+    Questo sito non ha un modulo di contatto generico e non registra utenti. Se ordini restando
+    sul sito, tocchi "Ordinare" e riempi il modulo per completare l'ordine: nome, telefono e,
+    solo se scegli la consegna a domicilio, l'indirizzo. L'email è facoltativa. Nel modulo trovi
+    anche una casella separata, anch'essa facoltativa, per dirci se vuoi ricevere offerte e
+    promozioni via email: se non la spunti, non ti invieremo nessuna email di marketing.
   </p>
   <p>
-    Come ogni sito web, i sistemi del fornitore di hosting registrano in automatico alcune informazioni
-    tecniche nei cosiddetti log di accesso: indirizzo IP del dispositivo, data e ora della richiesta,
-    indirizzo della pagina richiesta, tipo di browser e sistema operativo, esito della richiesta.
-    Questi dati non vengono usati per identificare nessuno e non vengono incrociati con altre informazioni.
+    Questi dati servono innanzitutto a scrivere il messaggio che vedrai pronto quando tocchi
+    "Invia su WhatsApp": da quel momento sei tu a decidere se inviarlo, dal tuo numero WhatsApp
+    al nostro, e noi riceviamo l'ordine come un normale messaggio WhatsApp. In aggiunta, una copia
+    tecnica dello stesso ordine (nome, telefono, indirizzo, email se l'hai indicata, ed eventuale
+    consenso al marketing) viene inviata in automatico a D4 Digital Studio, l'agenzia che gestisce
+    il sito per nostro conto, così da tenere un registro degli ordini e delle richieste di offerte.
+    Non inviamo invece nessuna newsletter automatica: se hai dato il consenso, le eventuali email
+    promozionali te le mandiamo noi, appoggiandoci a D4 Digital Studio per l'invio tecnico.
+  </p>
+  <p>
+    Come ogni sito web, i sistemi del fornitore di hosting registrano inoltre in automatico alcune
+    informazioni tecniche nei cosiddetti log di accesso: indirizzo IP del dispositivo, data e ora
+    della richiesta, indirizzo della pagina richiesta, tipo di browser e sistema operativo, esito
+    della richiesta. Questi dati non vengono usati per identificare nessuno e non vengono incrociati
+    con altre informazioni.
   </p>
 
   <h2>Perché li trattiamo e per quanto tempo</h2>
+  <p class="tight"><strong>Nome, telefono e indirizzo per l'ordine WhatsApp</strong></p>
+  <ul>
+    <li><strong>Finalità:</strong> preparare e consegnare la pizza che hai ordinato, e contattarti se serve per gestire l'ordine.</li>
+    <li><strong>Base giuridica:</strong> misure precontrattuali richieste da te ed esecuzione del contratto di vendita (art. 6.1.b GDPR).</li>
+    <li><strong>Conservazione:</strong> il tempo necessario a evadere l'ordine, più il tempo previsto dalla legge per eventuali obblighi fiscali o contestazioni. Puoi chiederci di cancellare la conversazione WhatsApp quando vuoi.</li>
+  </ul>
+  <p class="tight"><strong>Email e consenso al marketing (facoltativi)</strong></p>
+  <ul>
+    <li><strong>Finalità:</strong> inviarti, solo se lo hai chiesto tu spuntando l'apposita casella, offerte e promozioni di Pizzeria Numero 1.</li>
+    <li><strong>Base giuridica:</strong> il tuo consenso libero e specifico (art. 6.1.a GDPR), separato dal consenso per gestire l'ordine. Puoi revocarlo quando vuoi, senza che questo cambi in nulla la gestione degli ordini già fatti o futuri.</li>
+    <li><strong>Come revocarlo:</strong> scrivendo a <a href="mailto:pizzerianumero1como@gmail.com">pizzerianumero1como@gmail.com</a> o rispondendo "STOP" a qualsiasi email promozionale ricevuta.</li>
+    <li><strong>Conservazione:</strong> finché non revochi il consenso o, se non lo revochi prima, per un massimo di 24 mesi dall'ultimo ordine.</li>
+  </ul>
+  <p class="tight"><strong>Log tecnici del sito</strong></p>
   <ul>
     <li><strong>Finalità:</strong> far funzionare il sito, garantirne la sicurezza e accorgersi di eventuali abusi o guasti.</li>
     <li><strong>Base giuridica:</strong> legittimo interesse del titolare a mantenere il sito sicuro e funzionante (art. 6.1.f GDPR).</li>
@@ -99,9 +146,28 @@ footer a{display:inline-block;padding:8px 0}
     </p>
   </div>
   <p>
+    Il selettore della lingua in alto usa il <em>local storage</em> del browser (una memoria tecnica
+    simile ai cookie) solo per ricordare se hai scelto italiano, inglese, spagnolo o tedesco. Resta
+    esclusivamente sul tuo dispositivo, non viene mai inviato a noi né a terzi e non serve a
+    profilarti: per questo, come i cookie tecnici, non richiede consenso.
+  </p>
+  <p>
     Se in futuro il sito installerà uno strumento di misurazione o una mappa interattiva, questa
     informativa verrà aggiornata e comparirà un banner per raccogliere il consenso preventivo, come
     richiesto dall'art. 122 del Codice Privacy e dalle Linee guida del Garante del 10 giugno 2021.
+  </p>
+
+  <h2>WhatsApp</h2>
+  <p>
+    I pulsanti "Ordinare", "Invia su WhatsApp" e "Scrivici" aprono l'app WhatsApp con un messaggio
+    già scritto, che parte dal tuo numero al nostro. Da quel momento la conversazione avviene su
+    WhatsApp, un servizio di WhatsApp Ireland Ltd. (gruppo Meta): per quella parte vale la loro
+    informativa privacy, su cui non abbiamo controllo, consultabile su
+    <a href="https://www.whatsapp.com/legal/privacy-policy" rel="noopener">whatsapp.com/legal/privacy-policy</a>.
+  </p>
+  <p>
+    Noi riceviamo il messaggio come qualunque altro messaggio WhatsApp che ci scrivi, e lo usiamo
+    solo per preparare il tuo ordine.
   </p>
 
   <h2>Mappa e collegamenti esterni</h2>
@@ -120,8 +186,12 @@ footer a{display:inline-block;padding:8px 0}
   <h2>A chi comunichiamo i dati</h2>
   <p>
     I log tecnici sono trattati dal fornitore del servizio di hosting, nominato responsabile del
-    trattamento ai sensi dell'art. 28 GDPR. Nessun dato viene ceduto o venduto a terzi.
-    Non effettuiamo trasferimenti di dati fuori dallo Spazio economico europeo.
+    trattamento ai sensi dell'art. 28 GDPR. Il messaggio con i dati del tuo ordine passa invece
+    attraverso WhatsApp/Meta, che per il proprio servizio di messaggistica tratta quei dati come
+    titolare autonomo e non come nostro responsabile: vedi la sezione "WhatsApp" qui sopra.
+    Nessun dato viene ceduto o venduto a terzi per finalità di marketing. Non effettuiamo
+    trasferimenti di dati fuori dallo Spazio economico europeo, salvo quelli che WhatsApp/Meta
+    effettua in autonomia per il proprio servizio.
   </p>
 
   <h2>I tuoi diritti</h2>
