@@ -331,6 +331,23 @@ footer li{margin-bottom:6px}
   .call:hover{transform:translateY(-2px);box-shadow:0 10px 30px oklch(20% 0.02 40 / .32)}
 }
 
+/* whatsapp flotante */
+.wa-float{
+  position:fixed;left:14px;bottom:calc(82px + env(safe-area-inset-bottom));z-index:61;
+  width:56px;height:56px;border-radius:50%;overflow:hidden;display:block;
+  background:var(--paper);box-shadow:0 8px 22px oklch(20% 0.02 40 / .32);
+  transition:transform .15s var(--ease),box-shadow .15s var(--ease);
+}
+.wa-float img{width:100%;height:100%;object-fit:cover;display:block}
+.wa-float:active{transform:scale(.94)}
+@media (hover:hover) and (pointer:fine){
+  .wa-float:hover{transform:translateY(-3px);box-shadow:0 10px 28px oklch(20% 0.02 40 / .38)}
+}
+@media (prefers-reduced-motion:reduce){.wa-float{transition:none}}
+@media (min-width:900px){
+  .wa-float{left:24px;bottom:24px;width:60px;height:60px}
+}
+
 @media (min-width:640px){
   .feat-grid{grid-template-columns:repeat(3,1fr)}
   .list{grid-template-columns:1fr 1fr}
@@ -819,6 +836,10 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
     </div>
   </div>
 </dialog>
+
+<a class="wa-float" href="https://wa.me/393334430164" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp" data-i18n-aria="step1_whatsapp">
+  <img src="icon-whatsapp-pizza.png" alt="" width="60" height="60">
+</a>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Restaurant","name":"Pizzeria Numero 1","alternateName":["Pizzeria & Kebab Al Numero 1","Pizzeria Noi Tre"],"legalName":"Pizzeria Noi Tre di Zoheir Abir Sayed Ali A.","description":"Pizzeria d'asporto, kebab e piadineria con forno a legna a Monte Olimpino, Como. Pizza a 5,99 euro, bibita a scelta +1 euro, tutti i giorni dalle 18:00 alle 23:00.","servesCuisine":["Pizza","Kebab","Italiana"],"telephone":"+39 031 2073720","priceRange":"€","currenciesAccepted":"EUR","paymentAccepted":"Contanti, Carte di credito, Carte di debito, Contactless","vatID":"IT04221150131","address":{"@type":"PostalAddress","streetAddress":"Via Bellinzona 187","addressLocality":"Como","postalCode":"22100","addressRegion":"CO","addressCountry":"IT"},"geo":{"@type":"GeoCoordinates","latitude":45.8268026,"longitude":9.0480389},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"18:00","closes":"23:00"}],"url":"https://pizzerianumero1.d4digitalstudio.it/","image":"https://pizzerianumero1.d4digitalstudio.it/icon-512.png","hasMap":"https://maps.app.goo.gl/hqWGvpCXQUtksS8U6","hasDeliveryMethod":["http://purl.org/goodrelations/v1#DeliveryModePickUp","http://purl.org/goodrelations/v1#DeliveryModeOwnFleet"],"areaServed":{"@type":"GeoCircle","geoMidpoint":{"@type":"GeoCoordinates","latitude":45.8268026,"longitude":9.0480389},"geoRadius":4000},"acceptsReservations":false}
