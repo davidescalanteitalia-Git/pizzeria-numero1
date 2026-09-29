@@ -1240,10 +1240,23 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
     /*
     try{
       var d4campos = [];
+      d4campos.push({k:'Nome', v: nome});
+      d4campos.push({k:'Telefono', v: telefono});
+      if(email) d4campos.push({k:'Email', v: email});
+      order.forEach(function(o){
+        var itNamesD4 = ingredientsFor(o.id, 'it');
+        var senzaNamesD4 = o.senza.map(function(idx){ return itNamesD4[idx]; }).filter(Boolean);
+        var extraNamesD4 = (o.extra || []).map(function(key){ return it['extra_' + key]; }).filter(Boolean);
+        var detPartsD4 = [];
+        if(senzaNamesD4.length) detPartsD4.push('Senza: ' + senzaNamesD4.join(', '));
+        if(extraNamesD4.length) detPartsD4.push('Extra: ' + extraNamesD4.join(', '));
+        if(o.drink && it['drink_' + o.drink]) detPartsD4.push(it['drink_' + o.drink]);
+        var detStrD4 = detPartsD4.length ? (detPartsD4.join(' · ') + ' — ' + eur(itemPrice(o))) : eur(itemPrice(o));
+        d4campos.push({k: o.name, v: detStrD4});
+      });
       d4campos.push({k:'Modalità', v: consegna ? 'Consegna a domicilio' : 'Ritiro in pizzeria'});
       if(consegna) d4campos.push({k:'Indirizzo', v: coAddress.value.trim()});
       d4campos.push({k:'Totale', v: eur(subtotal + dcost)});
-      d4campos.push({k:'Ordine', v: order.map(function(o){ return o.name; }).join(', ')});
       var d4payload = {
         sitio: 'pizzerianumero1',
         idioma: curLang(),
