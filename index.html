@@ -1276,13 +1276,9 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
     lines.push('Telefono: ' + telefono);
     if(email) lines.push('Email: ' + email);
 
-    // DISATTIVATO 2026-09-25: quell'endpoint ('d4-form-web') è dedicato a Don Segundo
-    // Sombra, non è multi-sito. Un ordine di prova è arrivato con il nome/branding di
-    // Don Segundo Sombra. Da riattivare solo quando esiste un webhook/workflow n8n
-    // dedicato a Pizzeria Numero 1 (o uno multi-sito vero, che smisti per "sitio").
-    // Il consenso al marketing (coMarketing) resta salvato solo nel messaggio WhatsApp
-    // per ora: non c'è ancora nessun posto dove si registra in modo automatico.
-    /*
+    // Riattivato 2026-09-30: workflow n8n dedicato "D4 - Formulario web (Pizzeria
+    // Kebab Numero 1)", pubblicato, con path proprio (pizzeria-numero1-form).
+    // Non condivide più nulla con Don Segundo Sombra / Lucy / PMA.
     try{
       var d4campos = [];
       d4campos.push({k:'Nome', v: nome});
@@ -1312,13 +1308,12 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
         marketing: !!(coMarketing && coMarketing.checked),
         campos: d4campos
       };
-      fetch('https://n8n.tiendaonline.it/webhook/d4-form-web', {
+      fetch('https://n8n.tiendaonline.it/webhook/pizzeria-numero1-form', {
         method: 'POST', mode: 'no-cors', keepalive: true,
         headers: {'Content-Type': 'text/plain;charset=UTF-8'},
         body: JSON.stringify(d4payload)
       }).catch(function(){});
     }catch(_e){}
-    */
 
     location.href = 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(lines.join('\n'));
   });
