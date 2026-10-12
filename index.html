@@ -13,6 +13,8 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="favicon-64.png" sizes="64x64">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" as="image" href="forno-a-legna-pizzeria-como-800.jpg" media="(max-width:600px)" fetchpriority="high">
+<link rel="preload" as="image" href="forno-a-legna-pizzeria-como.jpg" media="(min-width:601px)" fetchpriority="high">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Numero 1">
 <meta property="og:title" content="Pizzeria Numero 1 — Como">
@@ -496,7 +498,7 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top">
-      <img src="logo-header.png" alt="Pizzeria Kebab Numero 1">
+      <img src="logo-header.png" alt="Pizzeria Kebab Numero 1" width="170" height="197">
     </a>
     <nav class="links" aria-label="Sezioni" data-i18n-aria="nav_label">
       <a href="#menu" data-i18n="nav_pizze">Le pizze</a>
@@ -517,7 +519,7 @@ dialog[open]{animation:sheet-in .22s var(--ease)}
 <main id="contenuto">
 
 <div class="hero" id="top">
-  <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" poster="forno-a-legna-pizzeria-como.jpg" onerror="this.style.display='none'">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" onerror="this.style.display='none'">
     <source src="forno-a-legna-pizzeria-como.mp4" type="video/mp4">
   </video>
   <div class="hero-scrim" aria-hidden="true"></div>
