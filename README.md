@@ -37,6 +37,12 @@ Para que funcione hacen falta dos secretos en el repositorio
 | `robots.txt` · `sitemap.xml` | Para Google |
 | `LEEME.txt` · `PUBLICAR.txt` | Notas de mantenimiento |
 
+## Idiomas
+
+`en/`, `es/` y `de/` se generan desde `index.html` y su diccionario `I18N`.
+Tras cada cambio de `index.html`, ejecutar `python tools/build_lang.py` y subir
+tambien esas carpetas.
+
 ## Reglas de la casa
 
 - **Sin terceros.** La pagina no carga nada de fuera: ni Google Fonts, ni

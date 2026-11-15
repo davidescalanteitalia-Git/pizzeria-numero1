@@ -1,7 +1,7 @@
 {
   "name": "Pizzeria Numero 1",
   "short_name": "Numero 1",
-  "description": "Pizzeria d'asporto e kebab con forno a legna in Via Bellinzona 187, Como. Pizza e bibita 6,99 euro, tutti i giorni 18:00-23:00.",
+  "description": "Pizzeria d'asporto e kebab con forno a legna in Via Bellinzona 187, Como. Pizza 5,99 euro, bibita a scelta +1 euro, tutti i giorni 18:00-23:00.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
