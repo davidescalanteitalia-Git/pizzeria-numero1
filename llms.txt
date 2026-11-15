@@ -4,8 +4,11 @@
 
 ## Pagine
 
-- [Sito e menù](https://pizzerianumero1.d4digitalstudio.it/): menù completo delle trenta pizze, kebab e piadine, come ordinare (telefono o WhatsApp), ritiro in sede o consegna a domicilio, orari e indirizzo.
-- [Informativa privacy](https://pizzerianumero1.d4digitalstudio.it/privacy.html): trattamento dei dati personali raccolti per la gestione degli ordini.
+- [Sito e menù](https://pizzeriakebabnumero1.it/): menù completo delle trenta pizze, kebab e piadine, come ordinare (telefono o WhatsApp), ritiro in sede o consegna a domicilio, orari e indirizzo.
+- [Pizza a domicilio a Como](https://pizzeriakebabnumero1.it/pizza-a-domicilio-como/): giorni, costi e zona della consegna.
+- [Kebab e piadine](https://pizzeriakebabnumero1.it/kebab-como/): prezzi e come ordinarli.
+- [Domande frequenti](https://pizzeriakebabnumero1.it/domande-frequenti/): prezzi, orari, pagamenti, allergeni.
+- [Informativa privacy](https://pizzeriakebabnumero1.it/privacy.html): trattamento dei dati personali raccolti per la gestione degli ordini.
 
 ## Info
 
