@@ -3,3 +3,5 @@ Thumbs.db
 *.zip
 node_modules/
 .htmlvalidate.json
+__pycache__/
+.claude/
