@@ -32,6 +32,13 @@ META = {
 }
 
 
+LINKS = {
+    "en": {"pizza-a-domicilio-como": "en/pizza-delivery-como", "kebab-como": "en/kebab-como", "domande-frequenti": "en/faq"},
+    "es": {"pizza-a-domicilio-como": "es/pizza-a-domicilio-como", "kebab-como": "es/kebab-como", "domande-frequenti": "es/preguntas-frecuentes"},
+    "de": {"pizza-a-domicilio-como": "de/pizza-lieferung-como", "kebab-como": "de/kebab-como", "domande-frequenti": "de/haeufige-fragen"},
+}
+
+
 def tag_content(src, pattern, value):
     out, n = re.subn(pattern, lambda m: m.group(1) + html.escape(value, quote=True) + m.group(2), src, count=1)
     assert n == 1, pattern
@@ -78,11 +85,20 @@ def build(src, i18n, lang):
     )
     out = re.sub(r"url\('([^')]+)'\)", lambda m: "url('%s')" % absolute(m.group(1)), out)
     out = out.replace("'icon-' +", "'/icon-' +").replace("register('sw.js')", "register('/sw.js')")
+    for italian, local in LINKS[lang].items():
+        out = out.replace('href="/%s/"' % italian, 'href="/%s/"' % local)
     return out
 
 
 def main():
     src = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
+    stats_path = os.path.join(ROOT, "tools", "analytics.html")
+    stats = open(stats_path, encoding="utf-8").read().strip() if os.path.exists(stats_path) else ""
+    marked = re.sub(r"<!-- analytics -->.*?<!-- /analytics -->", lambda m: "<!-- analytics -->" + stats + "<!-- /analytics -->", src, flags=re.S)
+    if marked != src:
+        src = marked
+        with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8", newline=chr(10)) as f:
+            f.write(src)
     line = next(l for l in src.split("\n") if l.lstrip().startswith("var I18N = "))
     i18n = json.loads(line[line.index("{"):].rstrip().rstrip(";"))
     for lang in META:

@@ -28,8 +28,89 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://pizzeriakebabnumero1.it/de/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pizzeriakebabnumero1.it/"/>
     <changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pizzeriakebabnumero1.it/pizza-a-domicilio-como/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pizzeriakebabnumero1.it/kebab-como/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pizzeriakebabnumero1.it/domande-frequenti/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pizzeriakebabnumero1.it/pizza-a-domicilio-como/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pizzeriakebabnumero1.it/pizza-a-domicilio-como/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pizzeriakebabnumero1.it/en/pizza-delivery-como/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pizzeriakebabnumero1.it/es/pizza-a-domicilio-como/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pizzeriakebabnumero1.it/de/pizza-lieferung-como/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pizzeriakebabnumero1.it/pizza-a-domicilio-como/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pizzeriakebabnumero1.it/en/pizza-delivery-como/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pizzeriakebabnumero1.it/pizza-a-domicilio-como/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pizzeriakebabnumero1.it/en/pizza-delivery-como/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pizzeriakebabnumero1.it/es/pizza-a-domicilio-como/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pizzeriakebabnumero1.it/de/pizza-lieferung-como/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pizzeriakebabnumero1.it/pizza-a-domicilio-como/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pizzeriakebabnumero1.it/es/pizza-a-domicilio-como/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pizzeriakebabnumero1.it/pizza-a-domicilio-como/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pizzeriakebabnumero1.it/en/pizza-delivery-como/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pizzeriakebabnumero1.it/es/pizza-a-domicilio-como/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pizzeriakebabnumero1.it/de/pizza-lieferung-como/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pizzeriakebabnumero1.it/pizza-a-domicilio-como/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pizzeriakebabnumero1.it/de/pizza-lieferung-como/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pizzeriakebabnumero1.it/pizza-a-domicilio-como/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pizzeriakebabnumero1.it/en/pizza-delivery-como/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pizzeriakebabnumero1.it/es/pizza-a-domicilio-como/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pizzeriakebabnumero1.it/de/pizza-lieferung-como/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pizzeriakebabnumero1.it/pizza-a-domicilio-como/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pizzeriakebabnumero1.it/kebab-como/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pizzeriakebabnumero1.it/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pizzeriakebabnumero1.it/en/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pizzeriakebabnumero1.it/es/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pizzeriakebabnumero1.it/de/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pizzeriakebabnumero1.it/kebab-como/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pizzeriakebabnumero1.it/en/kebab-como/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pizzeriakebabnumero1.it/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pizzeriakebabnumero1.it/en/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pizzeriakebabnumero1.it/es/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pizzeriakebabnumero1.it/de/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pizzeriakebabnumero1.it/kebab-como/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pizzeriakebabnumero1.it/es/kebab-como/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pizzeriakebabnumero1.it/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pizzeriakebabnumero1.it/en/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pizzeriakebabnumero1.it/es/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pizzeriakebabnumero1.it/de/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pizzeriakebabnumero1.it/kebab-como/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pizzeriakebabnumero1.it/de/kebab-como/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pizzeriakebabnumero1.it/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pizzeriakebabnumero1.it/en/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pizzeriakebabnumero1.it/es/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pizzeriakebabnumero1.it/de/kebab-como/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pizzeriakebabnumero1.it/kebab-como/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pizzeriakebabnumero1.it/domande-frequenti/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pizzeriakebabnumero1.it/domande-frequenti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pizzeriakebabnumero1.it/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pizzeriakebabnumero1.it/es/preguntas-frecuentes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pizzeriakebabnumero1.it/de/haeufige-fragen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pizzeriakebabnumero1.it/domande-frequenti/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pizzeriakebabnumero1.it/en/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pizzeriakebabnumero1.it/domande-frequenti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pizzeriakebabnumero1.it/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pizzeriakebabnumero1.it/es/preguntas-frecuentes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pizzeriakebabnumero1.it/de/haeufige-fragen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pizzeriakebabnumero1.it/domande-frequenti/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pizzeriakebabnumero1.it/es/preguntas-frecuentes/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pizzeriakebabnumero1.it/domande-frequenti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pizzeriakebabnumero1.it/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pizzeriakebabnumero1.it/es/preguntas-frecuentes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pizzeriakebabnumero1.it/de/haeufige-fragen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pizzeriakebabnumero1.it/domande-frequenti/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pizzeriakebabnumero1.it/de/haeufige-fragen/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://pizzeriakebabnumero1.it/domande-frequenti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pizzeriakebabnumero1.it/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pizzeriakebabnumero1.it/es/preguntas-frecuentes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pizzeriakebabnumero1.it/de/haeufige-fragen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pizzeriakebabnumero1.it/domande-frequenti/"/>
+    <changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pizzeriakebabnumero1.it/privacy.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>

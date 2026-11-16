@@ -43,6 +43,14 @@ Para que funcione hacen falta dos secretos en el repositorio
 Tras cada cambio de `index.html`, ejecutar `python tools/build_lang.py` y subir
 tambien esas carpetas.
 
+Las paginas de domicilio, kebab y preguntas frecuentes (en los cuatro idiomas) se
+generan con `python tools/build_pages.py`; sus textos estan en `tools/pages_content.py`.
+
+## Estadisticas
+
+Umami sin cookies en https://stats.d4digitalstudio.it (servicio `umami-stats` en Coolify).
+El fragmento que se inserta en todas las paginas esta en `tools/analytics.html`.
+
 ## Reglas de la casa
 
 - **Sin terceros.** La pagina no carga nada de fuera: ni Google Fonts, ni
@@ -54,8 +62,10 @@ tambien esas carpetas.
 - **Las fotos** no son de Numero 1, son genericas. Sustituirlas en cuanto
   el propietario mande las suyas. Cuidado con que los ingredientes que se
   ven coincidan con el texto (Reg. UE 1169/2011, art. 7).
-- **Los precios** salen del folleto: 6,99 € pizza mas bebida, hasta el
-  31 de diciembre de 2026. Si cambia la oferta, cambiar tambien la cabecera.
+- **Los precios**: pizza 5,99 € (precio normal, sin fecha de fin ni precio
+  tachado desde 2026-11-16), bebida +1 €, kebab 5,00 €, extras 1 € (2 € salame,
+  wurstel, prosciutto, tonno y bufala). Si cambian, cambiar tambien
+  `tools/pages_content.py` y regenerar.
 
 ## Pendiente antes de dar por buena la web
 
